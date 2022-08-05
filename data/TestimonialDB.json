@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/jason.jpg?raw=true",
+    "name": "Jason Wandrag",
+    "text": "Joshua Steed has shown great dedication to constantly improving himself and his work. He is consistent and hardworking, which shows in the quality of work he produces.",
+    "role": "Lecturer"
+  },
+  {
+    "id": 2,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/vusumzi.jpg?raw=true",
+    "name": "Vusumzi Msengana",
+    "text": "Joshua is a hardworking and consistent person, he likes thinking outside the box and has great creative abilities.",
+    "role": "Classmate"
+  },
+  {
+    "id": 3,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/lihle.jpg?raw=true",
+    "name": "Lihle Goliath",
+    "text": "Focused and diligent to his work. Has a great eye for creativity and visualization towards his ideas, this means he knows what he want in life. He would be a great assert wherever he goes.",
+    "role": "Classmate"
+  },
+  {
+    "id": 4,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/sindile.jpg?raw=true",
+    "name": "Sindile Kula",
+    "text": "Joshua is a bright young man with a creative mind. He like to accomplish things at his own pace and according to his own preferences. He is highly diligent and hardworking when it comes to his career.",
+    "role": "Classmate"
+  },
+  {
+    "id": 5,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/raaid.jpg?raw=true",
+    "name": "Raaid Abdullatief",
+    "text": "One of the most hardworking and committed people I've worked with. You can see the passion in his projects as you scroll down the page. Always a pleasure to work with.",
+    "role": "Classmate"
+  },
+  {
+    "id": 6,
+    "imageURL": "https://github.com/0xjoshva/portfolio-vue/blob/main/src/assets/tristan.jpg?raw=true",
+    "name": "Tristan Daniels",
+    "text": "Joshua is a passionate and  goal-driven person. He always focuses on the task at hand and works to the best of his ability",
+    "role": "Classmate"
+  }
+]
