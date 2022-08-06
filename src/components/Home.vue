@@ -6,7 +6,7 @@
    <h1>EVOLVE</h1>
    <h4>your gaming experience</h4>
    <p><span id="highlight">become the beast,</span> take gaming to the next level with our over-engineered gaming rigs</p>
-   <button id="btnmarket">Browse Marketplace</button>
+   <router-link to="/marketplace"><button id="btnmarket">Browse Marketplace</button></router-link>
    </div>
    </div>
   </section>
@@ -24,10 +24,11 @@ export default {};
   height: 100vh;
 }
 #hero{
-  width: 800px;
+  width: 45rem;
   height: auto;
   padding-right: 2rem;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
+  filter: brightness(72%) contrast(120%) grayscale(0%) blur(0px) invert(0%) opacity(100%) saturate(228%) sepia(0%) hue-rotate(7deg) drop-shadow(rgb(85, 85, 85) 0px 0px 0px);
 }
 #landing{
 
@@ -45,7 +46,7 @@ export default {};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
-  font-size: 12rem;
+  font-size: 10rem;
   line-height: 9rem;
 }
 #heading h4{

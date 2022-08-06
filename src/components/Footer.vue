@@ -74,4 +74,7 @@ font-family: 'Poppins', sans-serif;
     li{
       padding: 0.3rem;
     }
+    .wrapper p {
+      padding: 0.3rem;
+    }
 </style>

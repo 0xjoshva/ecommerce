@@ -1,16 +1,18 @@
 <template>
   <Home />
   <About />
+  <Preview/>
   <Footer/>
 </template>
 
-<script>
+<script>``
 import Home from "../components/Home.vue";
 import About from "../components/About.vue";
 import Footer from "../components/Footer.vue";
+import Preview from "@/components/Preview.vue";
 export default {
   name: "HomeView",
-  components: { Home, About, Footer},
+  components: { Home, About, Footer, Preview },
 };
 </script>
 

@@ -14,11 +14,6 @@
 
     <div class="container">
      <div class="item"></div>
-     <div class="item"></div>
-     <div class="item"></div>
-     <div class="item"></div>
-     <div class="item"></div>
-     <div class="item"></div>
     </div>
 </section>
 </template>
@@ -90,7 +85,9 @@ select{
     height: fit-content;
     flex-direction: row;
     width: 100%;
-    gap: 5rem;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    justify-content: center;
 }
 .item{
     flex-basis: 25%;
