@@ -2,6 +2,7 @@
   <Home />
   <About />
   <Preview/>
+
   <Footer/>
 </template>
 
@@ -12,7 +13,7 @@ import Footer from "../components/Footer.vue";
 import Preview from "@/components/Preview.vue";
 export default {
   name: "HomeView",
-  components: { Home, About, Footer, Preview },
+  components: { Home, About, Footer, Preview},
 };
 </script>
 

@@ -23,12 +23,12 @@ export default {};
   width: 100%;
   height: 100vh;
 }
+
 #hero{
-  width: 45rem;
+  width: 47rem;
   height: auto;
   padding-right: 2rem;
   padding-top: 2.5rem;
-  filter: brightness(72%) contrast(120%) grayscale(0%) blur(0px) invert(0%) opacity(100%) saturate(228%) sepia(0%) hue-rotate(7deg) drop-shadow(rgb(85, 85, 85) 0px 0px 0px);
 }
 #landing{
 
@@ -41,6 +41,14 @@ export default {};
   font-family: 'Clash Display', sans-serif;
   
 }
+#heading::before{      
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12rem;
+    height: 60vh;
+    width: 0.3em;
+    background: #9e00ce;}
 #heading h1{
   background: -webkit-linear-gradient(180deg, rgb(204, 156, 236), rgb(164, 32, 252));
   -webkit-background-clip: text;
@@ -78,4 +86,5 @@ border-radius: 8px;
     padding-right: 0.6rem;
     color: rgba(255, 255, 255, 0.808);
 }
+
 </style>

@@ -88,4 +88,13 @@ img {
 nav a :active {
   color: var(--lgreen);
 }
+
+::-moz-selection { 
+background-color: rgb(153, 0, 255);
+color: #ffffff;
+}
+::selection {
+background-color: rgb(153, 0, 255);
+color: #ffffff;
+}
 </style>
