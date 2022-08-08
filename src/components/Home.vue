@@ -4,8 +4,8 @@
    <img src="../assets/pc.png" alt="" id="hero">
    <div id="heading">
    <h1>EVOLVE</h1>
-   <h4>your gaming experience</h4>
-   <p><span id="highlight">become the beast,</span> take gaming to the next level with our over-engineered gaming rigs</p>
+   <h4>your gaming setup</h4>
+   <p><span id="highlight">become the beast,</span> take gaming to the next level with our over-engineered gaming rigs and top quality components</p>
    <router-link to="/marketplace"><button id="btnmarket">Browse Marketplace</button></router-link>
    </div>
    </div>

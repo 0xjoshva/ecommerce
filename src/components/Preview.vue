@@ -285,12 +285,14 @@ padding-right: 4rem;
   border-left: 2px solid #333;
  border-right: none;
   margin: 2rem;
+  margin-left: 4rem;
 
 }
 .specs:nth-of-type(odd){
   border-right: 2px solid #333;
  border-left: none;
  margin-right: 6rem;
+ margin-left: 0;
 
 }
 ul{
