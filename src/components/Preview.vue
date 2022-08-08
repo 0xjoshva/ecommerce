@@ -1,76 +1,84 @@
 <template>
-<section id="featured">
-
-      <div class="vr">
-    <img src="../assets/remote1.png" alt="" class="remote1 remote">
-   <img src="../assets/headset.png" alt="" class="headset">
-   <img src="../assets/remote2.png" alt="" class="remote2 remote">
-  </div>
-      <h1>UNREAL <span id="price">PRICING</span></h1>
-      <div class="center">
+  <section id="featured">
+    <div class="vr">
+      <img src="../assets/remote1.png" alt="" class="remote1 remote" />
+      <img src="../assets/headset.png" alt="" class="headset" />
+      <img src="../assets/remote2.png" alt="" class="remote2 remote" />
+    </div>
+    <h1>UNREAL <span id="price">PRICING</span></h1>
+    <div class="center">
       <button class="panel"><h4>UP TO 50% OFF</h4></button>
       <a href="" id="terms">Terms & Conditions Apply</a>
-      </div>
+    </div>
 
     <!-- categorie filters -->
-      <div class="container">
-        <div class="item cat1" alt="systems">
-            <div>
-            <h2>GLACIER</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cupiditate error possimus?</p>
-            <button>Add to Cart</button></div>
-            <div>
-                <h4>Specifications</h4>
-                <ul>
-                    <li>CPU:placeholer</li>
-                    <li>GPU:placeholder</li>
-                    <li>RAM: placeholder</li>
-                </ul>
-            </div>
-            <img src="../assets/pc5.png" alt="" id="prebuilt1">
+    <div class="container">
+      <div class="item cat1" alt="systems">
+        <div class="text">
+          <h2 class="glacier title">GLACIER</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            cupiditate error possimus?
+          </p>
+          <button id="prebtn">Add to Cart</button>
         </div>
-        <div class="item cat2" alt="components">
-            <img src="../assets/pcred.png" alt="" id="prebuilt2">
-                                   <div>
-                <h4>Specifications</h4>
-                <ul>
-                    <li>CPU:placeholer</li>
-                    <li>GPU:placeholder</li>
-                    <li>RAM: placeholder</li>
-                </ul>
-            </div>
-            <div>
-            <h2>CRIMSON</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, adipisci. Molestias, illum!</p>
-            <button>Add to Cart</button></div>
-
+        <div class="specs">
+          <ul>
+            <li>- RYZEN 9 5900X</li>
+            <li>- RX 6800</li>
+            <li>- 32GB DDR4</li>
+            <li>- Windows 11</li>
+          </ul>
         </div>
-        <div class="item cat3" alt="peripherals">
-            <div><h2>COBALT</h2>
-            
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eos rem perferendis?</p>
-            <button> Add to Cart</button></div>
-                       <div>
-                <h4>Specifications</h4>
-                <ul>
-                    <li>CPU:placeholer</li>
-                    <li>GPU:placeholder</li>
-                    <li>RAM: placeholder</li>
-                </ul>
-            </div>
-            <img src="../assets/pcblue.png" alt="" id="prebuilt3">
+        <img src="../assets/pc5.png" alt="" id="prebuilt1" />
+      </div>
+      <div class="item cat2" alt="components">
+        <img src="../assets/pcred.png" alt="" id="prebuilt2" />
+        <div class="specs">
+          <ul>
+            <li>- i7 9700k</li>
+            <li>- RTX 3060</li>
+            <li>- 16GB DDR4</li>
+            <li>- Windows 11</li>
+          </ul>
+        </div>
+        <div class="text">
+          <h2 class="crimson title">CRIMSON</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+            adipisci. Molestias, illum!
+          </p>
+          <button id="prebtn">Add to Cart</button>
         </div>
       </div>
-</section>
+      <div class="item cat3" alt="peripherals">
+        <div class="text">
+          <h2 class="cobalt title">COBALT</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eos
+            rem perferendis?
+          </p>
+          <button id="prebtn">Add to Cart</button>
+        </div>
+        <div class="specs">
+          <ul>
+            <li>- i5 9400f</li>
+            <li>- GTX 1660</li>
+            <li>- 16GB</li>
+            <li>- Windows 11</li>
+          </ul>
+        </div>
+        <img src="../assets/pcblue.png" alt="" id="prebuilt3" />
+      </div>
+    </div>
+  </section>
 </template>
 <script scoped>
-export default {
-    
-}
+export default {};
 </script>
 <style scoped>
-#featured{
-    background-color: var(--bg-color);
+#featured {
+  background-color: var(--bg-color);
   background-image: url(../assets/curves2.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -80,107 +88,111 @@ export default {
   display: flex;
   flex-direction: column;
 }
-#featured h1{
-      background: -webkit-linear-gradient(180deg, rgb(183, 92, 243), rgb(153, 0, 255));
+#featured h1 {
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(183, 92, 243),
+    rgb(153, 0, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
   font-size: 6rem;
   line-height: 9rem;
-    font-family: 'Clash Display', sans-serif;
-    text-align: center;
-    -webkit-text-fill-color: white;
+  font-family: "Clash Display", sans-serif;
+  text-align: center;
+  -webkit-text-fill-color: white;
 }
-#price{
-    color: white !important;
-    font-weight: 300;
-    font-family: 'Clash Display', sans-serif;
-      -webkit-background-clip: text;
+#price {
+  color: white !important;
+  font-weight: 300;
+  font-family: "Clash Display", sans-serif;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    
 }
 
-.vr{
-   padding-right: 2rem;
+.vr {
+  padding-right: 2rem;
   padding-top: 2.5rem;
   padding-left: 14rem;
-
 }
-.remote1{
-     margin-top: 14rem;
-  transform: translate(-1rem,12rem);
+.remote1 {
+  margin-top: 14rem;
+  transform: translate(-1rem, 12rem);
   width: 13rem;
   height: auto;
-   animation: infinite 5.7s floating;
+  animation: infinite 5.7s floating;
 }
-.remote2{
-    margin-top: 5rem;
+.remote2 {
+  margin-top: 5rem;
   transform: translate(-5rem, 10rem);
-    width: 16rem;
+  width: 16rem;
   height: auto;
   animation: infinite 6.4s floating3;
 }
-.headset{
+.headset {
   width: 34rem;
   height: auto;
-    animation: infinite 8s floating2;
+  animation: infinite 8s floating2;
 }
 
 @keyframes floating {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-2rem);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-2rem);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 @keyframes floating2 {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-0.8rem);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-0.8rem);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 @keyframes floating3 {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-0.4rem);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-0.4rem);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
-.center{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-bottom: 5rem;
 }
-.panel{
-   background: rgb(153, 0, 255);
-    width: 50rem;
-    height: 5rem;
-    border-radius: 5px;
-     box-shadow: 0 4px 8px 0 rgba(22, 22, 22, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     transition: box-shadow 0.3s ease-in-out;
+.panel {
+  background: rgb(153, 0, 255);
+  width: 50rem;
+  height: 5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(22, 22, 22, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
 }
-.panel:hover{
-    box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2), 0 6px 20px 0 rgba(132, 25, 204, 0.19);
-    cursor: pointer;
-              -webkit-mask-image: linear-gradient(
+.panel:hover {
+  box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
+    0 6px 20px 0 rgba(132, 25, 204, 0.19);
+  -webkit-mask-image: linear-gradient(
     -200deg,
     rgba(0, 0, 0, 1) 25%,
     rgba(0, 0, 0, 0.85) 50%,
@@ -190,11 +202,11 @@ export default {
   animation: shine 1s linear infinite;
 }
 
-.panel h4{
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
+.panel h4 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 @keyframes shine {
   from {
@@ -203,52 +215,115 @@ export default {
   to {
     -webkit-mask-position: -50%;
   }
-  }
-  #terms{
-    font-family: 'Inter', sans-serif;
-    color: rgba(255, 255, 255, 0.568);
-    transition: 0.2s ease-in all;
-  }
-    #terms:hover{
-    font-family: 'Inter', sans-serif;
-    color: white;
-  }
-  .container{
-    padding-top: 3rem;
-    padding-bottom: 5rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   row-gap: 3rem;
-  }
-  .item{
+}
+#terms {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.568);
+  transition: 0.2s ease-in all;
+}
+#terms:hover {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+.container {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+.item {
   box-shadow: 0 0 0 4px #333;
   border-radius: 5px;
   height: 17rem;
   width: 75rem;
-  cursor: pointer;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  }
-   .item:nth-child(2) {
+}
+.item:nth-child(even) {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+#prebuilt1 {
+  height: 25rem;
+  width: auto;
+}
+#prebuilt2 {
+  height: 22rem;
+  width: auto;
+  transform: scaleX(-1);
+}
+#prebuilt3 {
+  height: 23rem;
+  width: auto;
+}
+
+.text{
+width: 20rem;
+color: rgb(228, 228, 228);
+font-family: "Inter", sans-serif;
+font-size: 1rem;
+font-weight: 100;
+}
+.specs{
+width: fit-content;
+height: fit-content;
+color: rgb(228, 228, 228);
+font-family: "Inter", sans-serif;
+font-size: 1rem;
+font-weight: 100;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+padding-left: 4rem;
+padding-right: 4rem;
+  border-left: 2px solid #333;
+ border-right: none;
+  margin: 2rem;
 
 }
-  #prebuilt1{
-    height: 25rem;
-    width: auto;
-  }
-  #prebuilt2{
-    height: 22rem;
-    width: auto;
-    transform: scaleX(-1);
-  }
-   #prebuilt3{
-    height: 23rem;
-    width: auto;
-  }
+.specs:nth-of-type(odd){
+  border-right: 2px solid #333;
+ border-left: none;
+ margin-right: 6rem;
+
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.title {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Inter", sans-serif;
+  width: fit-content;
+}
+#prebtn{
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+ background: var(--bg-color);
+ border: 2px solid rgb(115, 38, 202);
+ transition: 0.4s all ease-in-out;
+
+}
+#prebtn:hover{
+transform: scale(1.02);
+    box-shadow: -1px 0px 25px 1px #7e00e1;
+}
+#prebtn:focus{
+  transform: scale(0.97);
+}
 </style>
