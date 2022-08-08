@@ -1,80 +1,47 @@
 <template>
   <section id="featured">
-    <div class="vr">
+    <!-- <div class="vr">
       <img src="../assets/remote1.png" alt="" class="remote1 remote" />
       <img src="../assets/headset.png" alt="" class="headset" />
       <img src="../assets/remote2.png" alt="" class="remote2 remote" />
-    </div>
+    </div> -->
     <h1>UNREAL <span id="price">PRICING</span></h1>
     <div class="center">
       <button class="panel"><h4>UP TO 50% OFF</h4></button>
       <a href="" id="terms">Terms & Conditions Apply</a>
     </div>
-
-    <!-- categorie filters -->
     <div class="container">
-      <div class="item cat1" alt="systems">
+      <div v-for="pc in data" v-bind:key="pc.id" class="item">
         <div class="text">
-          <h2 class="glacier title">GLACIER</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-            cupiditate error possimus?
+          <h2 class="title">{{ pc.title }}</h2>
+          <p class="description">
+            {{ pc.description }}
           </p>
+          <p class="pricing"><span class="before">{{ pc.price_before }}</span> <span class="now">{{ pc.price_now }}</span></p>
           <button id="prebtn">Add to Cart</button>
         </div>
         <div class="specs">
           <ul>
-            <li>- RYZEN 9 5900X</li>
-            <li>- RX 6800</li>
-            <li>- 32GB DDR4</li>
-            <li>- Windows 11</li>
+            <li>{{ pc.cpu }}</li>
+            <li>{{ pc.gpu }}</li>
+            <li>{{ pc.ram }}</li>
+            <li>{{ pc.os }}</li>
           </ul>
         </div>
-        <img src="../assets/pc5.png" alt="" id="prebuilt1" />
-      </div>
-      <div class="item cat2" alt="components">
-        <img src="../assets/pcred.png" alt="" id="prebuilt2" />
-        <div class="specs">
-          <ul>
-            <li>- i7 9700k</li>
-            <li>- RTX 3060</li>
-            <li>- 16GB DDR4</li>
-            <li>- Windows 11</li>
-          </ul>
-        </div>
-        <div class="text">
-          <h2 class="crimson title">CRIMSON</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            adipisci. Molestias, illum!
-          </p>
-          <button id="prebtn">Add to Cart</button>
-        </div>
-      </div>
-      <div class="item cat3" alt="peripherals">
-        <div class="text">
-          <h2 class="cobalt title">COBALT</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eos
-            rem perferendis?
-          </p>
-          <button id="prebtn">Add to Cart</button>
-        </div>
-        <div class="specs">
-          <ul>
-            <li>- i5 9400f</li>
-            <li>- GTX 1660</li>
-            <li>- 16GB</li>
-            <li>- Windows 11</li>
-          </ul>
-        </div>
-        <img src="../assets/pcblue.png" alt="" id="prebuilt3" />
+        <img v-bind:src="pc.image" alt="" id="image" />
       </div>
     </div>
   </section>
 </template>
 <script scoped>
-export default {};
+import prebuilt from "/data/prebuilt.json";
+export default {
+  data() {
+    return {
+      data: prebuilt,
+    };
+  },
+};
 </script>
 <style scoped>
 #featured {
@@ -87,6 +54,7 @@ export default {};
   height: fit-content;
   display: flex;
   flex-direction: column;
+    padding-top: 10rem;
 }
 #featured h1 {
   background: -webkit-linear-gradient(
@@ -175,7 +143,7 @@ export default {};
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 .panel {
   background: rgb(153, 0, 255);
@@ -238,7 +206,7 @@ export default {};
   box-shadow: 0 0 0 4px #333;
   border-radius: 5px;
   height: 17rem;
-  width: 75rem;
+  width: 65rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -247,19 +215,15 @@ export default {};
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: row-reverse;
 }
-#prebuilt1 {
+#image{
   height: 25rem;
   width: auto;
+  transform: scaleX(1);
 }
-#prebuilt2 {
-  height: 22rem;
-  width: auto;
-  transform: scaleX(-1);
-}
-#prebuilt3 {
-  height: 23rem;
-  width: auto;
+#image:nth-of-type(){
+ transform: scaleX(-1);
 }
 
 .text{
@@ -268,9 +232,10 @@ color: rgb(228, 228, 228);
 font-family: "Inter", sans-serif;
 font-size: 1rem;
 font-weight: 100;
+padding: 1rem;
 }
 .specs{
-width: fit-content;
+width: 20rem;
 height: fit-content;
 color: rgb(228, 228, 228);
 font-family: "Inter", sans-serif;
@@ -328,4 +293,22 @@ transform: scale(1.02);
 #prebtn:focus{
   transform: scale(0.97);
 }
+.text p{
+  color: rgb(185, 185, 185);
+}
+.pricing{
+  display: flex;
+  flex-direction: column;
+  padding-top:1rem;
+}
+.before{
+  text-decoration: line-through;
+  text-decoration-color: #7e00e1;
+  color: rgb(175, 175, 175);
+}
+.now{
+  font-size: 2rem;
+  color: white;
+}
+
 </style>
