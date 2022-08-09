@@ -17,6 +17,11 @@ const routes = [
     name: "marketplace",
     component: () => import("../views/MarketView.vue"),
   },
+  {
+    path: "/product",
+    name: "product",
+    component: () => import("../views/ProductView.vue"),
+  },
 ];
 
 const router = createRouter({

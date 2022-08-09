@@ -1,10 +1,10 @@
 <template>
   <section id="featured">
-    <!-- <div class="vr">
+    <div class="vr">
       <img src="../assets/remote1.png" alt="" class="remote1 remote" />
       <img src="../assets/headset.png" alt="" class="headset" />
       <img src="../assets/remote2.png" alt="" class="remote2 remote" />
-    </div> -->
+    </div>
     <h1>UNREAL <span id="price">PRICING</span></h1>
     <div class="center">
       <button class="panel"><h4>UP TO 50% OFF</h4></button>
@@ -277,11 +277,12 @@ ul{
  background: var(--bg-color);
  border: 2px solid rgb(115, 38, 202);
  transition: 0.4s all ease-in-out;
+ background: rgb(115, 38, 202);
 
 }
 #prebtn:hover{
 transform: scale(1.02);
-    box-shadow: -1px 0px 25px 1px #7e00e1;
+    box-shadow: -1px 0px 25px 1px rgb(115, 38, 202);
 }
 #prebtn:focus{
   transform: scale(0.97);
