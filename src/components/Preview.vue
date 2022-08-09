@@ -20,14 +20,7 @@
           <p class="pricing"><span class="before">{{ pc.price_before }}</span> <span class="now">{{ pc.price_now }}</span></p>
           <button id="prebtn">Add to Cart</button>
         </div>
-        <div class="specs">
-          <ul>
-            <li>{{ pc.cpu }}</li>
-            <li>{{ pc.gpu }}</li>
-            <li>{{ pc.ram }}</li>
-            <li>{{ pc.os }}</li>
-          </ul>
-        </div>
+  
         <img v-bind:src="pc.image" alt="" id="image" />
       </div>
     </div>
@@ -203,8 +196,9 @@ export default {
   row-gap: 3rem;
 }
 .item {
-  box-shadow: 0 0 0 4px #333;
+  /* box-shadow: 0 0 0 4px #333; */
   border-radius: 5px;
+  background: rgb(32, 32, 32);
   height: 17rem;
   width: 65rem;
   display: flex;
@@ -218,7 +212,7 @@ export default {
   flex-direction: row-reverse;
 }
 #image{
-  height: 25rem;
+  height: 20rem;
   width: auto;
   transform: scaleX(1);
 }
