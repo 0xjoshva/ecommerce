@@ -3,18 +3,18 @@
     <div id="container">
 <img class="product" src="../assets/cooler.png" alt="">
 <div class="text">
-<router-link to="/marketplace"><a href=""><p><i class="bi bi-arrow-left"></i> Go back</p></a></router-link>
+<router-link to="/marketplace"><a href=""><p><i class="bi bi-arrow-left"></i> Go Back</p></a></router-link>
 <h2 class="category">CPU COOLER</h2>
 <h2 class="title">NZXT Z2Fi</h2>
 <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam excepturi quod voluptas? Labore ipsa dolor sed consequatur sint numquam! Quam non itaque aperiam commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta perferendis laborum, possimus beatae odio!</p>
 
 <div class="buttons">
+    <button>Add to Cart</button>
 <label for="quantity" class="qlabel">
             Quantity  
             <input type="number" name="quantity" class="quantity"
                 min="1" max="10" step="1" value="1">
         </label>
-<button>Add to Cart</button>
 </div>
 <div class="specs">
     <div class="one">
@@ -54,7 +54,7 @@ export default {
     #container{
         background: rgb(34, 34, 34);
         border-radius:20px;
-    box-shadow: 0px 0px 0px 4px #5e5e5e;
+    box-shadow: 0px 0px 0px 4px #303030cb;
     min-height: 30rem;
 width: 90rem;
 display: flex;
@@ -72,7 +72,7 @@ height:40rem;
         object-position: center;
         padding: 2rem;
         border-radius:20px;
-        transition: ease-in 0.1s all;
+        transition: ease-in 0.3s all;
         background: transparent;
         filter: drop-shadow(0px 0px 2.3rem #7e00e1);
        /* box-shadow: 20px 19px 200px 0px #7e00e1; */
@@ -83,12 +83,15 @@ height:40rem;
     .category{
         font-family: 'Poppins';
         font-weight:500;
-        font-size: 2rem;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: 1rem;
     }
     .title{
         font-family: 'Poppins';
-        font-weight:500;
+        font-weight:200;
         font-size: 3rem;
+        line-height: 3rem;
     }
             .specs > div{
          color: #8a8a8a;
@@ -110,6 +113,7 @@ height:40rem;
 .descrip{
     color: rgb(165, 165, 165);
     width: 35rem;
+    padding-top: 0.5rem;
 }
 .qlabel{
 display: flex;
@@ -137,6 +141,7 @@ a{
 }
 a:hover{
     color: rgb(174, 44, 250);
+    text-decoration: underline;
 }
 .buttons{
     display: flex;
@@ -146,12 +151,20 @@ button{
    height: fit-content;
    justify-self: center;
    align-self: flex-end;
-   margin-left: 2rem;
-   padding: 0.4rem 1rem;
-   border-radius: 4px;
+   margin-right: 2rem;
+   padding: 0.6rem 1rem;
+   border-radius: 25px;
    outline: none;
    border: none;
    color: white;
-   background: rgb(162, 1, 255);
+   border:2px solid rgb(162, 1, 255);
+   background: transparent;
+   transition: ease-in-out 0.2s all;
+}
+button:hover{
+    transform: scale(1.05);
+}
+button:focus{
+    transform: scale(1);
 }
 </style>
