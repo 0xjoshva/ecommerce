@@ -190,30 +190,28 @@ export default {
   padding-top: 3rem;
   padding-bottom: 5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   row-gap: 3rem;
+  column-gap: 3rem;
 }
 .item {
   /* box-shadow: 0 0 0 4px #333; */
   border-radius: 5px;
   background: rgb(32, 32, 32);
-  height: 17rem;
+  min-height: 17rem;
+  height: fit-content;
   width: fit-content;
-  flex-direction: row;
+  flex-direction: column-reverse;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.item:nth-child(even) {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row-reverse;
-}
+
 #image{
-  height: 20rem;
+  min-height: 16rem;
+  height: 21rem;
   width: auto;
   transform: scaleX(1);
 }
