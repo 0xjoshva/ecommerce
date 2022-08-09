@@ -1,20 +1,21 @@
 [
   {
     "id": 1,
-    "title": "GLACIER",
-    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/pc5.png?raw=true",
-    "description": "Minimalistic design finished with a black and white colour scheme",
+    "title": "NIGHT",
+    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/blkpc.png?raw=true",
+    "description": "Minimalistic design finished with a sleek all black finish",
     "price_before": 32.999,
     "price_now": 29.999,
-    "cpu": "i9 10400k",
-    "gpu": "RX 6800",
-    "ram": "32GB DDR4",
+    "cpu": "i5 9400f",
+    "gpu": "GTX 1660",
+    "ram": "16GB DDR4",
     "os": "Windows 11"
   },
+
   {
     "id": 2,
     "title": "CRIMSON",
-    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/pcred.png?raw=true",
+    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/redpc.png?raw=true",
     "description": "Minimalistic design finished with a black and red colour scheme",
     "price_before": 32.999,
     "price_now": 29.999,
@@ -23,16 +24,16 @@
     "ram": "16GB DDR4",
     "os": "Windows 11"
   },
-{
+  {
     "id": 3,
-    "title": "COBALT",
-    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/pcblue.png?raw=true",
-    "description": "Minimalistic design finished with a black and blue colour scheme",
+    "title": "GLACIER",
+    "image": "https://github.com/0xjoshva/ecommerce/blob/main/src/assets/whitepc.png?raw=true",
+    "description": "Minimalistic design finished with a black and white colour scheme",
     "price_before": 32.999,
     "price_now": 29.999,
-    "cpu": "i5 9400f",
-    "gpu": "GTX 1660",
-    "ram": "16GB DDR4",
+    "cpu": "i9 10400k",
+    "gpu": "RX 6800",
+    "ram": "32GB DDR4",
     "os": "Windows 11"
-}
+  }
 ]

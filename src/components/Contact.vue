@@ -23,6 +23,18 @@ export default {
     align-items: center;
     justify-content: center;
   }
+  #contact::before{
+    content: "CONTACT";
+    position: absolute;
+    left: 21rem;
+    transform: rotate(270deg);
+    color: rgb(90, 90, 90);
+    filter: opacity(0.05);
+    font-size: 8rem;
+    font-family: 'Inter';
+    font-weight: 900;
+    }
+  
   .form{
     margin: 2rem;
     padding: 3rem;

@@ -17,7 +17,7 @@
           <p class="description">
             {{ pc.description }}
           </p>
-          <p class="pricing"><span class="before">{{ pc.price_before }}</span> <span class="now">{{ pc.price_now }}</span></p>
+          <p class="pricing"><span class="before">R{{ pc.price_before }}</span> <span class="now">R{{ pc.price_now }}</span></p>
           <button id="prebtn">Add to Cart</button>
         </div>
   
@@ -200,7 +200,8 @@ export default {
   border-radius: 5px;
   background: rgb(32, 32, 32);
   height: 17rem;
-  width: 65rem;
+  width: fit-content;
+  flex-direction: row;
   display: flex;
   justify-content: flex-end;
   align-items: center;
