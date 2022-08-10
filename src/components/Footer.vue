@@ -2,7 +2,7 @@
 <section id="footer">
 <div class="container">
   <div class="wrapper">
-    <img src="../assets/Logo.svg" alt="">
+    <img src="../assets/Logo3.svg" alt="" id="logo">
   </div>
   <div class="wrapper">
     <ul>
@@ -76,5 +76,8 @@ font-family: 'Poppins', sans-serif;
     }
     .wrapper p {
       padding: 0.3rem;
+    }
+    #logo{
+      height: 2.5rem;
     }
 </style>

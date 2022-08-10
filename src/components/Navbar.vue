@@ -1,9 +1,9 @@
-<template>
+<template id="divdiv">
   <nav class="sticky-top">
     
     <div>
     <router-link to="/" id="logo"
-      ><img src="../assets/Logo.svg" alt="logo" id="logo"
+      ><img src="../assets/Logo3.svg" alt="logo" id="logo"
     /></router-link>
     </div>
 
@@ -11,8 +11,55 @@
       <router-link to="/">Home</router-link>
       <router-link to="/marketplace">Marketplace</router-link>
       <router-link to="/contact">Contact</router-link>
-      <router-link to="/login" id="login">Login</router-link>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">New User?</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">Login</button>
+      
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <input type="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" placeholder="password">
+          <a href="" id="forgotpassword">forgot password?</a>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign in</button>
+      </div>
     </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+           <input type="name" class="name" placeholder="John Doe" required>
+          <input type="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" placeholder="password" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
   </nav>
 </template>
 <script>
@@ -20,8 +67,9 @@ export default {};
 </script>
 <style scoped>
 #logo {
-  width: 130px;
+  width: 8.5rem;
   height: auto;
+  margin-left: 1.3rem;
 }
 nav a {
   text-decoration: none;
@@ -34,7 +82,7 @@ nav a:focus{
   color: white;
 }
 nav {
-  background: var(--bg-color);
+  background: transparent;
   color: rgba(255, 255, 255, 0.404);
   display: flex;
   justify-content: space-between;
@@ -44,7 +92,7 @@ font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 20px;
-  border-bottom: 1px solid var(--dgrey);
+
   width: 100%;
 }
 #nav-links {
@@ -108,5 +156,93 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.modal-backdrop {
+  position: relative !important;
+   z-index: 0 !important;
+}
+.modal-content{
+  background:#1f1f1f;
+  color:white;
+  border: none;
+  border-radius: 25px;
+  
+}
+.modal-header{
+  border-bottom: none;
+  padding: 0;
+}
+.modal-footer{
+  border-top:none;
+}
+.btn-primary{
+  background: var(--dpurple);
+  border: none;
+  outline: none;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+      justify-content: space-evenly;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+}
+.btn-primary:focus{
+  box-shadow: none;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+input{
+  background: #303030;
+  outline: none;
+  border: none;
+  height: 3rem;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Inter';
+  padding-left: 1rem;
+  width: 100%;
+  border:1px solid #303030;
+}
+.btn-secondary{
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--dpurple);
+}
+.modal-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding: 0.75rem;
+}
+#forgotpassword{
+  font-family: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  justify-self: flex-end;
+  align-self: flex-end;
+  display: flex;
+}
+input:focus{
+  border:1px solid var(--dpurple);
+}
+#signup{
+  white-space: nowrap;
+  background: transparent;
+    text-decoration: none;
+  color: inherit;
+  padding: 0.3rem;
+padding-left: 0.8rem;
+padding-right: 0.8rem;
+color:white;
+}
+#signup:hover{
+  text-decoration: underline;
 }
 </style>

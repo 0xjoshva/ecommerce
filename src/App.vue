@@ -59,8 +59,8 @@ img {
   --bg-color: #1D1D1D;
   --dgrey: #1d1d1d;
   /* highlights */
-  --green: #1db954;
-  --lgreen: #00e472;
+  --lpurple: rgb(153, 0, 255);
+  --dpurple: rgb(118, 17, 212);
   /* for text */
   --lgrey: #8f8f8f;
   --white: #f1f1f1;
@@ -96,5 +96,13 @@ color: #ffffff;
 ::selection {
 background-color: rgb(153, 0, 255);
 color: #ffffff;
+}
+
+.modal-backdrop {
+   z-index: 0 !important;
+}
+body{
+  background: var(--bg-color);
+
 }
 </style>

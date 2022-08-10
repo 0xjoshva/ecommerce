@@ -18,7 +18,10 @@
             {{ pc.description }}
           </p>
           <p class="pricing"><span class="before">R{{ pc.price_before }}</span> <span class="now">R{{ pc.price_now }}</span></p>
+          <div>
           <button id="prebtn">Add to Cart</button>
+          <a href="">View Product</a>
+          </div>
         </div>
   
         <img v-bind:src="pc.image" alt="" id="image" />
@@ -53,7 +56,7 @@ export default {
   background: -webkit-linear-gradient(
     180deg,
     rgb(183, 92, 243),
-    rgb(153, 0, 255)
+    var(--dpurple)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -70,12 +73,14 @@ export default {
   font-family: "Clash Display", sans-serif;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
 .vr {
   padding-right: 2rem;
   padding-top: 2.5rem;
-  padding-left: 14rem;
+  /* padding-left: 14rem; desktop*/
+      padding-left: 5rem;
 }
 .remote1 {
   margin-top: 14rem;
@@ -139,7 +144,7 @@ export default {
   padding-bottom: 2rem;
 }
 .panel {
-  background: rgb(153, 0, 255);
+  background: var(--lpurple);
   width: 50rem;
   height: 5rem;
   border-radius: 5px;
@@ -149,6 +154,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: box-shadow 0.3s ease-in-out;
+  border: none;
 }
 .panel:hover {
   box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
@@ -275,14 +281,14 @@ ul{
   padding: 0.4rem 1rem;
   border-radius: 3px;
  background: var(--bg-color);
- border: 2px solid rgb(115, 38, 202);
+ border: 2px solid var(--lpurple);
  transition: 0.4s all ease-in-out;
- background: rgb(115, 38, 202);
+ background: var(--lpurple);
 
 }
 #prebtn:hover{
 transform: scale(1.02);
-    box-shadow: -1px 0px 25px 1px rgb(115, 38, 202);
+    box-shadow: -1px 0px 25px 1px var(--lpurple);
 }
 #prebtn:focus{
   transform: scale(0.97);
@@ -304,5 +310,14 @@ transform: scale(1.02);
   font-size: 2rem;
   color: white;
 }
-
+a{
+  color: white;
+  text-decoration: none;
+  margin-left: 0.1rem;
+  padding: 0.65rem 1rem;
+}
+a:hover{
+text-decoration: underline;
+text-decoration-color: rgba(255, 255, 255, 0.1);
+}
 </style>

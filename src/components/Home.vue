@@ -25,13 +25,12 @@ export default {};
 }
 
 #hero{
-  width: 47rem;
+  width: 40rem;
   height: auto;
   padding-right: 2rem;
   padding-top: 2.5rem;
 }
 #landing{
-
   display: flex;
   flex-direction: row-reverse;
 }
@@ -39,6 +38,11 @@ export default {};
   color: white;
   margin:auto;
   font-family: 'Clash Display', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  
+  flex-direction: column;
+  padding-left: 3rem;
   
 }
 #heading::before{      
@@ -48,19 +52,20 @@ export default {};
     top: 12rem;
     height: 60vh;
     width: 0.3em;
-    background: #9e00ce;}
+    background: var(--dpurple);}
 #heading h1{
-  background: -webkit-linear-gradient(180deg, rgb(204, 156, 236), rgb(164, 32, 252));
+  background: -webkit-linear-gradient(180deg, rgb(204, 156, 236), var(--dpurple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
-  font-size: 10rem;
-  line-height: 9rem;
+  font-size: 8rem;
+  line-height: 7rem;
 }
 #heading h4{
   margin-left: 0.3rem;
   text-align: left;
   font-size: 2rem;
+  line-height: 1rem;
 }
 #heading p{
   margin-top: 0.4rem;
@@ -70,11 +75,11 @@ export default {};
   width: 50%;
 }
 #highlight{
-  color: rgb(125, 46, 170);
+  color: var(--dpurple);
 }
 #btnmarket{
   background: rgba(96, 5, 182, 0.192);
-box-shadow: 0px 0px 8px 5px rgba(118, 17, 212, 0.712);
+
 border-radius: 8px;
   margin-left: 0.6rem;
   margin-top: 1rem;
@@ -85,6 +90,13 @@ border-radius: 8px;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     color: rgba(255, 255, 255, 0.808);
+    transition: box-shadow .3s ease-in-out;
 }
-
+#btnmarket:hover{
+  box-shadow: 0px 0px 15px 2px var(--dpurple);
+}
+#btnmarket:focus{
+  box-shadow: 0px 0px 100px 2px var(--dpurple);
+  transform: scale(1.05);
+}
 </style>

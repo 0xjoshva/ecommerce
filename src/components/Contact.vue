@@ -55,11 +55,6 @@ input{
   color: white;
   font-family: 'Inter';
   padding-left: 1rem;
-}
-.name{
-  width: 12rem;
-}
-.email{
   width: 20rem;
 }
 textarea:focus{

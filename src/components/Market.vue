@@ -14,6 +14,8 @@
 
     <div class="container">
      <div class="item"></div>
+     <div class="item"></div>
+     <div class="item"></div>
     </div>
 </section>
 </template>
