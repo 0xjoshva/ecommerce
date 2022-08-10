@@ -1,10 +1,10 @@
 <template>
   <section id="featured">
-    <div class="vr">
+    <!-- <div class="vr">
       <img src="../assets/remote1.png" alt="" class="remote1 remote" />
       <img src="../assets/headset.png" alt="" class="headset" />
       <img src="../assets/remote2.png" alt="" class="remote2 remote" />
-    </div>
+    </div> -->
     <h1>UNREAL <span id="price">PRICING</span></h1>
     <div class="center">
       <button class="panel"><h4>UP TO 50% OFF</h4></button>
@@ -31,7 +31,9 @@
 </template>
 <script scoped>
 import prebuilt from "/data/prebuilt.json";
+import About from "./Carousel.vue"
 export default {
+  components: {About},
   data() {
     return {
       data: prebuilt,
@@ -42,7 +44,7 @@ export default {
 <style scoped>
 #featured {
   background-color: var(--bg-color);
-  background-image: url(../assets/curves3.svg);
+  /* background-image: url(../assets/curves3.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -156,9 +158,8 @@ export default {
   align-items: center;
   transition: box-shadow 0.3s ease-in-out;
   border: none;
-}
-.panel:hover {
-  box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
+  animation: shine 3s linear infinite;
+    box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
     0 6px 20px 0 rgba(132, 25, 204, 0.19);
   -webkit-mask-image: linear-gradient(
     -200deg,
@@ -167,7 +168,10 @@ export default {
     rgba(0, 0, 0, 1) 75%
   );
   -webkit-mask-size: 200%;
-  animation: shine 1s linear infinite;
+}
+.panel:hover {
+
+  
 }
 
 .panel h4 {
@@ -188,6 +192,7 @@ export default {
   font-family: "Inter", sans-serif;
   color: rgba(255, 255, 255, 0.568);
   transition: 0.2s ease-in all;
+  padding: 0;
 }
 #terms:hover {
   font-family: "Inter", sans-serif;

@@ -79,16 +79,16 @@ export default {};
   color: var(--lpurple);
 }
 #btnmarket{
-  background: rgba(118, 17, 212, 0.212);
+  background: rgba(124, 17, 212, 0.212);
 
 border-radius: 8px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
     font-family: 'Poppins', sans-serif;
     border: none;
     outline: none;
     padding: 0.5rem;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
     color: rgba(255, 255, 255, 0.808);
     transition: box-shadow .3s ease-in-out;
 }

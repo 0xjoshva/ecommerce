@@ -115,6 +115,7 @@ background-repeat: no-repeat;
 </style> -->
 <template>
 <section id="about">
+  <div class="content">
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
@@ -142,6 +143,7 @@ background-repeat: no-repeat;
   </div>
   <p>Stay at the top of your game by purchasing our computers. We are stockists of all major brands such as <span>NVIDIA</span>, <span>AMD</span>, <span>INTEL</span>, <SPAN>MSI</SPAN>, and <span>NZXT</span> just to name a few. We have a massive product range which varies at any given time.</p>
 </div>
+</div>
 </section>
 </template>
 <script>
@@ -151,18 +153,26 @@ export default {
 </script>
 <style scoped>
   #about {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   background-position: bottom;
   background-repeat: no-repeat;
   width: 100%;
   height: fit-content;
   color: var(--white);
   font-family: "Poppins", sans-serif;
-  display: flex;
+ display: flex;
+ justify-content: center;
+}
+.content{
+  background-image: linear-gradient(  90.3deg,  rgb(53, 52, 52) 10.9%, var(--bg-color) 87.1% );
+   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   column-gap: 4rem;
+  width: fit-content;
+  border-radius: 26px;
+  width:68.5rem;
 }
 h2{
 font-family: 'Clash Display';
@@ -178,6 +188,7 @@ img{
   width: 26rem !important;
   max-width: 26rem !important;
   height: auto !important;
+  filter: brightness(80%);
 }
 .carousel-control-prev{
   height: 26rem;
@@ -194,5 +205,6 @@ p > span{
 }
 .text{
   align-self: center;
+  padding-right: 4rem;
 }
 </style>
