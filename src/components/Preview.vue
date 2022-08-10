@@ -42,7 +42,7 @@ export default {
 <style scoped>
 #featured {
   background-color: var(--bg-color);
-  background-image: url(../assets/curves2.svg);
+  background-image: url(../assets/curves3.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -51,6 +51,7 @@ export default {
   display: flex;
   flex-direction: column;
     padding-top: 10rem;
+    background-repeat: no-repeat;
 }
 #featured h1 {
   background: -webkit-linear-gradient(

@@ -91,7 +91,7 @@ nav {
 font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
-  padding: 20px;
+  padding: 3rem;
 
   width: 100%;
 }
@@ -101,19 +101,19 @@ font-family: 'Inter', sans-serif;
   
 }
 #login{
-border:2px solid rgb(94, 33, 192);
+border:2px solid var(--dpurple);
 background: rgba(255, 255, 255, 0);
-color:rgb(182, 107, 243);
+color:white;
 padding: 0.3rem;
-padding-left: 0.8rem;
-padding-right: 0.8rem;
+padding-left: 1.4rem;
+padding-right: 1.4rem;
 border-radius: 20px;
 transition: all 0.2s ease-in-out;
-margin-right: 2rem;
-
+margin-right: 3rem;
+font-weight: 500;
 }
 #login:focus{
- box-shadow: 0 0 0 2px #c281da00, 0 0 5px 5px #7701a1;
+ box-shadow: 0 0 0 2px #c281da00, 0 0 19px 1px var(--dpurple);
  transition: all 0.2s ease-in-out;
 }
 
@@ -160,6 +160,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .modal-backdrop {
   position: relative !important;
    z-index: 0 !important;
+
 }
 .modal-content{
   background:#1f1f1f;
@@ -238,9 +239,12 @@ input:focus{
     text-decoration: none;
   color: inherit;
   padding: 0.3rem;
-padding-left: 0.8rem;
+padding-left: 1.7rem;
 padding-right: 0.8rem;
 color:white;
+border-left: 2px solid rgba(255, 255, 255, 0.062);
+border-radius: 0;
+font-weight: 500;
 }
 #signup:hover{
   text-decoration: underline;

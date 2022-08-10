@@ -17,18 +17,20 @@ export default {
   #contact{
     width: 100%;
     height: 100vh;
-    background: var(--bg-color);
+    background: url(../assets/SimpleShiny.svg);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .form{
     margin: 2rem;
-    padding: 3rem;
-        height: 30rem;
-    width: 30rem;
+    padding: 5rem;
+        height: 40rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
 box-shadow: 0 0 0 4px #333;
@@ -72,10 +74,10 @@ input:focus{
     border: none;
     color: white;
     border: 3px;
-    background: blueviolet;
+    background: var(--lpurple);
     margin-top: 1rem;
     width: fit-content;
-    padding: 0.4rem 1rem;
+    padding: 0.8rem 1.5rem;
     font-weight: 500;
     font-family: 'Poppins';
     border-radius: 4px;

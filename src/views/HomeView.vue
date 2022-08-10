@@ -1,8 +1,7 @@
 <template>
   <Home />
-  <About />
   <Preview/>
-
+  <About />
   <Footer/>
 </template>
 
@@ -17,4 +16,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>

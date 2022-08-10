@@ -33,6 +33,7 @@ export default {};
 #landing{
   display: flex;
   flex-direction: row-reverse;
+ 
 }
 #heading{
   color: white;
@@ -58,14 +59,14 @@ export default {};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
-  font-size: 8rem;
-  line-height: 7rem;
+  font-size: 10rem;
+  line-height: 10rem;
 }
 #heading h4{
   margin-left: 0.3rem;
   text-align: left;
   font-size: 2rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
 #heading p{
   margin-top: 0.4rem;
@@ -75,13 +76,12 @@ export default {};
   width: 50%;
 }
 #highlight{
-  color: var(--dpurple);
+  color: var(--lpurple);
 }
 #btnmarket{
-  background: rgba(96, 5, 182, 0.192);
+  background: rgba(118, 17, 212, 0.212);
 
 border-radius: 8px;
-  margin-left: 0.6rem;
   margin-top: 1rem;
     font-family: 'Poppins', sans-serif;
     border: none;
