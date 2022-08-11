@@ -19,11 +19,16 @@
     <div class="container">
       <!-- item -->
       <div v-for="product in products" v-bind:key="product.id" class="item">
-        <img v-bind:src="product.image" alt="" class="image" />
-        <button class="cartbtn"><i class="bi bi-cart2"></i></button>
+        
+        
         <div class="type">
-          <p>{{ product.title }}</p>
+            <div>
+            <p id="category">{{product.category.toUpperCase()}}</p>
+          <p id="heading">{{ product.title }}</p></div>
+          <div><button class="cartbtn"><i class="bi bi-cart2"></i></button></div>
         </div>
+        
+        <img v-bind:src="product.image" alt="" class="image" />
       </div>
 
     </div>
@@ -31,7 +36,7 @@
 </template>
 <script type="text/javascript">
 export default {
-  data() {
+    data() {
     return {
       products: null,
     };
@@ -47,7 +52,8 @@ export default {
 #market {
   background-color: var(--bg-color);
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  padding-bottom: 5rem;
 }
 #filterlbl {
   color: white;
@@ -121,21 +127,23 @@ select {
 .item {
   flex-basis: 25%;
   width: 300px;
-  height: 250px;
+  height: fit-content;
   background: #242424;
   color: white;
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column-reverse;
+  border-radius: 20px;
 }
 .item:hover {
   transform: scale(1.1); /*70%*/
 }
 .image {
-  width: 300px;
-  height: 250px;
+  width:100%;
+  height: 15.62em;
   object-fit: contain;
   object-position: center;
+  margin-bottom: -4rem;
 }
 .item {
   /* box-shadow: 0 0 0 4px #333; */
@@ -148,6 +156,8 @@ select {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
 }
 
 #image {
@@ -252,22 +262,54 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.1);
 }
+
+.content {
+}
+.type{
+    width: 100%;
+    height: 4rem;
+    border-radius: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    display: flex;
+    margin-top: 3rem;
+    /* transform: scale(1.05); */
+    /* box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 20%); */
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.type #heading{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: fit-content;
+}
+#category{
+    width:fit-content;
+    font-size:0.7rem;
+    color: var(--lpurple);
+    font-family: 'Inter';
+}
 .cartbtn {
-  background: var(--lpurple);
   border-radius: 50%;
   border: none;
   font-size: 1.2rem;
   color: var(--white);
-  padding-top: 0.2rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  padding-top: 0.6rem;
   transition: all 0.3s ease-in-out;
-  border: 10px solid #242424;
+  /* border: 10px solid #242424; */
+  display: flex;
+  align-self: flex-start;
+  margin-right: 1rem;
+  background: rgb(32, 32, 32);
+
 }
 .cartbtn:focus {
   transform: scale(0.9);
-}
-.content {
 }
 </style>

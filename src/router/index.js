@@ -18,9 +18,10 @@ const routes = [
     component: () => import("../views/MarketView.vue"),
   },
   {
-    path: "/product",
-    name: "product",
+    path: "/products/:id",
+    name: "ProductView",
     component: () => import("../views/ProductView.vue"),
+    props: true,
   },
 ];
 

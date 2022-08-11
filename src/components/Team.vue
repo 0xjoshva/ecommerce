@@ -90,8 +90,8 @@ img {
     width: 42rem;
     height: auto;
     filter: grayscale(1);
-    margin-right: 8rem;
-    padding-right: 3rem;
+    margin-right: 14rem;
+    padding-right: 1rem;
 }
 .image {
   display: flex;

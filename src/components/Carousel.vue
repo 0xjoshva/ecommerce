@@ -169,10 +169,10 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 4rem;
+  column-gap: 4em;
   width: fit-content;
   border-radius: 26px;
-  width: 70.6rem;
+  width: 70.6em;
 }
 h2{
 font-family: 'Clash Display';
