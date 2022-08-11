@@ -172,7 +172,7 @@ export default {
   column-gap: 4rem;
   width: fit-content;
   border-radius: 26px;
-  width:68.5rem;
+  width: 70.6rem;
 }
 h2{
 font-family: 'Clash Display';

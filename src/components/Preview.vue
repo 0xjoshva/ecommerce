@@ -11,29 +11,34 @@
       <a href="" id="terms">Terms & Conditions Apply</a>
     </div>
     <div class="container">
+
       <div v-for="pc in data" v-bind:key="pc.id" class="item">
         <div class="text">
           <h2 class="title">{{ pc.title }}</h2>
           <p class="description">
             {{ pc.description }}
           </p>
-          <p class="pricing"><span class="before">R{{ pc.price_before }}</span> <span class="now">R{{ pc.price_now }}</span></p>
+          <p class="pricing">
+            <span class="before">R{{ pc.price_before }}</span>
+            <span class="now">R{{ pc.price_now }}</span>
+          </p>
           <div>
-          <button id="prebtn">Add to Cart</button>
-          <a href="">View Product</a>
+            <button id="prebtn">Add to Cart</button>
+            <a href="">View Product</a>
           </div>
         </div>
-  
+
         <img v-bind:src="pc.image" alt="" id="image" />
       </div>
     </div>
+    
   </section>
 </template>
 <script scoped>
 import prebuilt from "/data/prebuilt.json";
-import About from "./Carousel.vue"
+import About from "./Carousel.vue";
 export default {
-  components: {About},
+  components: { About },
   data() {
     return {
       data: prebuilt,
@@ -52,8 +57,8 @@ export default {
   height: fit-content;
   display: flex;
   flex-direction: column;
-    padding-top: 10rem;
-    background-repeat: no-repeat;
+  padding-top: 10rem;
+  background-repeat: no-repeat;
 }
 #featured h1 {
   background: -webkit-linear-gradient(
@@ -83,7 +88,7 @@ export default {
   padding-right: 2rem;
   padding-top: 2.5rem;
   /* padding-left: 14rem; desktop*/
-      padding-left: 5rem;
+  padding-left: 5rem;
 }
 .remote1 {
   margin-top: 14rem;
@@ -159,7 +164,7 @@ export default {
   transition: box-shadow 0.3s ease-in-out;
   border: none;
   animation: shine 3s linear infinite;
-    box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
+  box-shadow: 0 4px 1rem 0 rgba(138, 18, 218, 0.2),
     0 6px 20px 0 rgba(132, 25, 204, 0.19);
   -webkit-mask-image: linear-gradient(
     -200deg,
@@ -170,8 +175,6 @@ export default {
   -webkit-mask-size: 200%;
 }
 .panel:hover {
-
-  
 }
 
 .panel h4 {
@@ -221,51 +224,49 @@ export default {
   align-items: center;
 }
 
-#image{
+#image {
   min-height: 16rem;
   height: 21rem;
   width: auto;
   transform: scaleX(1);
 }
-#image:nth-of-type(){
- transform: scaleX(-1);
+#image:nth-of-type() {
+  transform: scaleX(-1);
 }
 
-.text{
-width: 20rem;
-color: rgb(228, 228, 228);
-font-family: "Inter", sans-serif;
-font-size: 1rem;
-font-weight: 100;
-padding: 1rem;
+.text {
+  width: 20rem;
+  color: rgb(228, 228, 228);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 1rem;
 }
-.specs{
-width: 20rem;
-height: fit-content;
-color: rgb(228, 228, 228);
-font-family: "Inter", sans-serif;
-font-size: 1rem;
-font-weight: 100;
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-padding-left: 4rem;
-padding-right: 4rem;
+.specs {
+  width: 20rem;
+  height: fit-content;
+  color: rgb(228, 228, 228);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
   border-left: 2px solid #333;
- border-right: none;
+  border-right: none;
   margin: 2rem;
   margin-left: 4rem;
-
 }
-.specs:nth-of-type(odd){
+.specs:nth-of-type(odd) {
   border-right: 2px solid #333;
- border-left: none;
- margin-right: 6rem;
- margin-left: 0;
-
+  border-left: none;
+  margin-right: 6rem;
+  margin-left: 0;
 }
-ul{
+ul {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
@@ -277,7 +278,7 @@ ul{
   font-family: "Inter", sans-serif;
   width: fit-content;
 }
-#prebtn{
+#prebtn {
   margin-top: 1rem;
   outline: none;
   border: none;
@@ -286,44 +287,43 @@ ul{
   font-family: "Inter", sans-serif;
   padding: 0.4rem 1rem;
   border-radius: 3px;
- background: var(--bg-color);
- border: 2px solid var(--lpurple);
- transition: 0.4s all ease-in-out;
- background: var(--lpurple);
-
+  background: var(--bg-color);
+  border: 2px solid var(--lpurple);
+  transition: 0.4s all ease-in-out;
+  background: var(--lpurple);
 }
-#prebtn:hover{
-transform: scale(1.02);
-    box-shadow: -1px 0px 25px 1px var(--lpurple);
+#prebtn:hover {
+  transform: scale(1.02);
+  box-shadow: -1px 0px 25px 1px var(--lpurple);
 }
-#prebtn:focus{
+#prebtn:focus {
   transform: scale(0.97);
 }
-.text p{
+.text p {
   color: rgb(185, 185, 185);
 }
-.pricing{
+.pricing {
   display: flex;
   flex-direction: column;
-  padding-top:1rem;
+  padding-top: 1rem;
 }
-.before{
+.before {
   text-decoration: line-through;
   text-decoration-color: #7e00e1;
   color: rgb(175, 175, 175);
 }
-.now{
+.now {
   font-size: 2rem;
   color: white;
 }
-a{
+a {
   color: white;
   text-decoration: none;
   margin-left: 0.1rem;
   padding: 0.65rem 1rem;
 }
-a:hover{
-text-decoration: underline;
-text-decoration-color: rgba(255, 255, 255, 0.1);
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.1);
 }
 </style>
