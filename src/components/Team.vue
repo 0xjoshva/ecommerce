@@ -79,41 +79,19 @@ h1 {
   z-index: -10;
 
 }
-.team:before{
-    content: "CO-FOUNDER";
-     font-family: "Clash Display";
-  color: rgba(255, 255, 255, 0.171);
-  font-weight: 500;
-  font-size: 3rem;
-  text-align: center;
-  z-index: -1;
-  position: absolute;
-  transform: translate(-41rem, 16.7rem);
-}
-.team:after{
-    content: "FOUNDER";
-     font-family: "Clash Display";
-  color: rgba(255, 255, 255, 0.171);
-  font-weight: 500;
-  font-size: 3rem;
-  text-align: center;
-  z-index: -1;
-  position: absolute;
-  transform: translate(20rem, 16.7rem);
-}
+
 .team {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  column-gap: 3rem;
 }
 img {
-  border-radius: 50%;
-  width: 35rem;
-  height: auto;
-  filter: grayscale(1);
-  margin-right: 2rem;
-  padding-right: 4rem;
+      border-radius: 50%;
+    width: 42rem;
+    height: auto;
+    filter: grayscale(1);
+    margin-right: 8rem;
+    padding-right: 3rem;
 }
 .image {
   display: flex;
@@ -150,6 +128,7 @@ h4 {
   font-family: "Poppins";
   font-size: 1.2rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .title > span {
   color: var(--lgrey);
