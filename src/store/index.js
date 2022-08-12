@@ -11,7 +11,7 @@ export default createStore({
   },
   actions: {
     login: async (context, payload) => {
-      fetch("http://eomp.herokuapp.com/users/login", {
+      fetch("https://eomp.herokuapp.com/users/login", {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default createStore({
       });
     },
     signUp: async (context, payload) => {
-      fetch('http://eomp.herokuapp.com/users/register', {
+      fetch('https://eomp.herokuapp.com/users/register', {
         method: 'POST',
         body: JSON.stringify({
             full_name: payload.full_name,
