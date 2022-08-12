@@ -22,16 +22,16 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
-          <input type="email" class="email" placeholder="example@email.com" required>
+        <form>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
           <div>
-          <input type="password" placeholder="password">
+          <input type="password" v-model="password" placeholder="password">
           <a href="" id="forgotpassword">forgot password?</a>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Sign in</button>
+        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Login</button>
       </div>
     </div>
   </div>
@@ -44,15 +44,16 @@
       </div>
       <div class="modal-body">
         <form action="">
-           <input type="name" class="name" placeholder="John Doe" required>
-          <input type="email" class="email" placeholder="example@email.com" required>
+           <input type="name" v-model="full_name" class="name" placeholder="John Doe" required>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
           <div>
-          <input type="password" placeholder="password" required>
+          <input type="password" v-model="password" placeholder="password" required>
           </div>
+          <p>Login after creating your account</p>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Sign up</button>
+        <button type="submit" @click.prevent="signUp()" class="btn btn-primary">Sign up</button>
       </div>
     </div>
   </div>
@@ -63,7 +64,30 @@
   </nav>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      full_name: "",
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", {
+        email: this.email,
+        password: this.password,
+      });
+    },
+    signUp() {
+      this.$store.dispatch("signUp", {
+        full_name: this.full_name,
+        email: this.email,
+        password: this.password,
+      });
+    },
+  },
+};
 </script>
 <style scoped>
 #logo {
