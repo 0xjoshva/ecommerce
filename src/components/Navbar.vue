@@ -49,6 +49,7 @@
           <div>
           <input type="password" v-model="password" placeholder="password" required>
           </div>
+          <div id="person" v-if="user"> Welcome {{ user.full_name }}</div>
           <p>Login after creating your account</p>
         </form>
       </div>

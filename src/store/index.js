@@ -2,12 +2,16 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    user: null,
+    User: null,
+    Product: null,
   },
   mutations: {
     setUser: (state, user) => {
-      state.user = user  ;
+      state.User = user  ;
     },
+    setProduct(state, product) {
+      state.activeProduct = product
+    }
   },
   actions: {
     login: async (context, payload) => {
@@ -28,7 +32,7 @@ export default createStore({
       });
     },
     signUp: async (context, payload) => {
-      fetch('https://eomp.herokuapp.com/users/register', {
+      fetch("https://eomp.herokuapp.com/users/register", {
         method: 'POST',
         body: JSON.stringify({
             full_name: payload.full_name,
@@ -36,7 +40,7 @@ export default createStore({
             password: payload.password,
         }),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        "Content-type": "application/json",
       },
     })
       .then((response) => response.json())

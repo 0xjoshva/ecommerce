@@ -19,18 +19,16 @@
     <div class="container">
       <!-- item -->
       <div v-for="product in products" v-bind:key="product.id" class="item">
-        
-        
+        <router-link :to="{ name: 'ProductView', params: { id: product.id }}">
+        <img v-bind:src="product.image" alt="" class="image" />
         <div class="type">
             <div>
             <p id="category">{{product.category.toUpperCase()}}</p>
-          <p id="heading">{{ product.title }}</p></div>
+          <p id="title">{{ product.title }}</p></div>
           <div><button class="cartbtn"><i class="bi bi-cart2"></i></button></div>
         </div>
-        
-        <img v-bind:src="product.image" alt="" class="image" />
+        </router-link>
       </div>
-
     </div>
   </section>
 </template>
@@ -42,7 +40,8 @@ export default {
     };
   },
   mounted() {
-    fetch("https://eomp.herokuapp.com/products", {})
+    fetch("https://eomp.herokuapp.com/products", {
+    })
       .then((res) => res.json())
       .then((data) => (this.products = data), console.log(this.products));
   },
