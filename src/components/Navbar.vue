@@ -12,7 +12,7 @@
       <router-link to="/marketplace">Marketplace</router-link>
       <router-link to="/contact">Contact</router-link>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">New User?</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">Login</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
       
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,7 +31,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Login</button>
+        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Sign in</button>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@ font-family: 'Inter', sans-serif;
   column-gap: 20px;
   
 }
-#login{
+#login1{
 border:2px solid var(--dpurple);
 background: rgba(255, 255, 255, 0);
 color:white;
@@ -137,7 +137,7 @@ transition: all 0.2s ease-in-out;
 margin-right: 3rem;
 font-weight: 500;
 }
-#login:focus{
+#login1:focus{
  box-shadow: 0 0 0 2px #c281da00, 0 0 19px 1px var(--dpurple);
  transition: all 0.2s ease-in-out;
 }

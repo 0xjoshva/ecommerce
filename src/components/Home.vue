@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section id="home">
   <div id="landing">
    <img src="../assets/pc.png" alt="" id="hero">
@@ -99,4 +99,35 @@ border-radius: 8px;
   box-shadow: 0px 0px 100px 2px var(--dpurple);
   transform: scale(1.05);
 }
+</style> -->
+
+<template>
+<section class="home">
+  <div class="text">
+    <h1>Think outside <br> The box</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nam atque ipsa.</p>
+  </div>
+  <div>
+  <img src="" alt="" id="image">
+  </div>
+</section>
+</template>
+<script>
+export default {
+  
+}
+</script>
+<style>
+  .home{
+    width: 100%;
+    height: 100vh;
+    background:radial-gradient(ellipse at 0% 55%, rgb(28, 1, 44) 0%, rgba(16, 16, 16, 1) 63%);
+    background-attachment: fixed;
+  }
+  h1{
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 6em;
+  }
 </style>

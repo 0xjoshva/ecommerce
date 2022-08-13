@@ -10,9 +10,86 @@ export default {
 };
 </script>
 <style>
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('./assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('./assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('./assets/fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Light.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('./assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('./assets/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('./assets/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Semibold.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('./assets/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif; */
 /* CSS RESET */
@@ -102,7 +179,7 @@ color: #ffffff;
    z-index: 0 !important;
 }
 body{
-  background: var(--bg-color);
+  background: #101010;
 
 }
 </style>
