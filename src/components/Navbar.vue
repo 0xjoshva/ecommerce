@@ -11,7 +11,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/marketplace">Marketplace</router-link>
       <router-link to="/contact">Contact</router-link>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">New User?</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
       
 <!-- Modal -->
@@ -126,7 +126,7 @@ font-family: 'Inter', sans-serif;
   
 }
 #login1{
-border:2px solid var(--dpurple);
+border:2px solid rgb(81, 2, 134);
 background: rgba(255, 255, 255, 0);
 color:white;
 padding: 0.3rem;
