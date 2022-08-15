@@ -129,7 +129,7 @@ border-radius: 8px;
               Corporis repudiandae dignissimos aperiam reiciendis quidem
               nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <router-link to="/products/2" id="btn123">View more</router-link>
+            <router-link to="/product/2" id="btn123">View more</router-link>
           </div>
           <img src="../assets/rtx3090.png" alt="" id="image1" />
         </div>
@@ -140,7 +140,7 @@ border-radius: 8px;
               Corporis repudiandae dignissimos aperiam reiciendis quidem
               nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <router-link to="/products/1" id="btn123">View more</router-link>
+            <router-link to="/product/1" id="btn123">View more</router-link>
           </div>
           <img src="../assets/coolerresized.png" alt="" id="image2" />
         </div>

@@ -86,7 +86,7 @@ export default {};
 <style scoped>
 #about {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   /* global 92%+ browsers support
     angrytools.com */
   background: radial-gradient(

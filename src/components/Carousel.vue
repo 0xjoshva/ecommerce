@@ -175,7 +175,7 @@ export default {
   width: 70.6em;
 }
 h2{
-font-family: 'Clash Display';
+ font-family: 'ClashDisplay-Extralight';
 font-weight: 500;
 font-size: 4rem;
 }

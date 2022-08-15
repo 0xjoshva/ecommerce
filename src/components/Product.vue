@@ -1,51 +1,39 @@
 <template>
-  <section id="products">
-    <div id="container">
-      <img class="product" src="../assets/cooler.png" alt="" />
-      <div class="text">
-        <router-link to="/marketplace"
-          ><a href=""
-            ><p><i class="bi bi-arrow-left"></i> Go Back</p></a
-          ></router-link
-        >
-        <h2 class="category">CPU COOLER</h2>
-        <h2 class="title">NZXT Z2Fi</h2>
-        <p class="descrip">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam
-          excepturi quod voluptas? Labore ipsa dolor sed consequatur sint
-          numquam! Quam non itaque aperiam commodi? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Labore dicta perferendis laborum,
-          possimus beatae odio!
-        </p>
-
-        <div class="buttons">
-          <button>Add to Cart</button>
-          <label for="quantity" class="qlabel">
-            Quantity
-            <input
-              type="number"
-              name="quantity"
-              class="quantity"
-              min="1"
-              max="10"
-              step="1"
-              value="1"
-            />
-          </label>
-        </div>
-        <div class="specs">
-          <div class="one">
-            <p>Up to</p>
-            <div class="intone int">2400 RPMs</div>
+  <section id="wrapper">
+    <div v-if="product" id="container">
+      <div v-for="product in product" v-bind:key="product.id" class="item">
+        <img class="image" :src="product.image" alt="" />
+        <div class="text">
+          
+          <h2 class="category"><router-link to="/marketplace" id="backbtn"
+            ><a href="/"
+              ><p><i class="bi bi-arrow-left"></i></p></a
+            ></router-link
+          >{{ product.category.toUpperCase() }}</h2>
+          <h2 class="title">{{ product.title }}</h2>
+          <p class="descrip">
+            {{ product.description }} lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laboriosam earum doloribus consequuntur suscipit, porro aperiam cumque necessitatibus corporis eos magni recusandae quae, dolorum fugiat?
+          </p>
+      
+          <div class="buttons">
+            
+            <button>Add to Cart</button>
+            <p class="title price">R{{ product.price }}</p>
           </div>
-          <div class="two">
-            <p>Warranty</p>
-            <div class="inttwo int">3 Years</div>
-          </div>
-          <div class="three">
-            <p>Free Delivery</p>
-            <div class="intthree int"><span>3</span> Days</div>
-            <p></p>
+          <div class="specs">
+            <div class="one">
+              <p>Up to</p>
+              <div class="intone int">2400 RPMs</div>
+            </div>
+            <div class="two">
+              <p>Warranty</p>
+              <div class="inttwo int">3 Years</div>
+            </div>
+            <div class="three">
+              <p>Free Delivery</p>
+              <div class="intthree int"><span>3</span> Days</div>
+              <p></p>
+            </div>
           </div>
         </div>
       </div>
@@ -54,37 +42,38 @@
 </template>
 <script>
 export default {
-  
+  data() {
+    return {
+      product: null,
+    };
+  },
+  mounted() {
+    fetch("https://eomp.herokuapp.com/products/" + this.$route.params.id)
+      .then((res) => res.json())
+      .then((data) => (this.product = data));
+
+    console.log(this.product);
+  },
 };
 </script>
 <style scoped>
-#products {
-  background: var(--bg-color);
+#wrapper {
   width: 100%;
   height: 89vh;
+  background: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Inter";
-  color: white;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
 }
-#container {
-  background: rgb(34, 34, 34);
-  border-radius: 20px;
-  box-shadow: 0px 0px 0px 4px #303030cb;
-  min-height: 30rem;
+.item {
+  height: fit-content;
   width: 90rem;
   display: flex;
-  flex-direction: row;
-  height: 40rem;
+   border-radius: 20px;
+  box-shadow: 0px 0px 0px 4px #4b0085;
+  
 }
-.text {
-  padding: 1rem 2rem;
-  text-align: left;
-}
-.product {
+.image {
   width: 40rem;
   height: 40rem;
   object-fit: contain;
@@ -96,8 +85,15 @@ export default {
   filter: drop-shadow(0px 0px 2.3rem #7e00e1);
   /* box-shadow: 20px 19px 200px 0px #7e00e1; */
 }
-.product:hover {
+.image:hover {
   transform: scale(1.04);
+}
+#container{
+    display: flex;
+    justify-content: center;
+    height: 84vh;
+    width: 100%;
+    align-items: center;
 }
 .category {
   font-family: "Poppins";
@@ -105,12 +101,14 @@ export default {
   font-size: 3rem;
   line-height: 3rem;
   margin-top: 1rem;
+  color:var(--white);
 }
 .title {
   font-family: "Poppins";
   font-weight: 200;
   font-size: 3rem;
   line-height: 3rem;
+  color:var(--white);
 }
 .specs > div {
   color: #8a8a8a;
@@ -184,4 +182,11 @@ button:hover {
 button:focus {
   transform: scale(1);
 }
+#backbtn{
+  font-size: 2rem;
+}
+.price{
+  padding-top:2rem;
+}
+
 </style>

@@ -18,7 +18,17 @@ const routes = [
     component: () => import("../views/MarketView.vue"),
   },
   {
-    path: "/products/:id",
+    path: "/admin/users",
+    name: "users",
+    component: () => import("../views/UsersView.vue"),
+  },
+  {
+    path: "/admin/products",
+    name: "products",
+    component: () => import("../views/ProductsView.vue"),
+  },
+  {
+    path: "/product/:id",
     name: "ProductView",
     component: () => import("../views/ProductView.vue"),
     props: true,

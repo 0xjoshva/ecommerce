@@ -48,6 +48,7 @@ export default {
 };
 </script>
 <style scoped>
+
 #market {
   background-color: var(--bg-color);
   width: 100%;
@@ -147,7 +148,6 @@ select {
 .item {
   /* box-shadow: 0 0 0 4px #333; */
   border-radius: 5px;
-  background: rgb(32, 32, 32);
   min-height: 17rem;
   height: fit-content;
   width: fit-content;
@@ -157,6 +157,9 @@ select {
   align-items: center;
   border-bottom-left-radius:25px;
     border-bottom-right-radius:25px;
+        background: rgb(19 19 19);
+         border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 #image {
@@ -305,7 +308,7 @@ a:hover {
   display: flex;
   align-self: flex-start;
   margin-right: 1rem;
-  background: rgb(32, 32, 32);
+ background: rgb(19 19 19);
 
 }
 .cartbtn:focus {
