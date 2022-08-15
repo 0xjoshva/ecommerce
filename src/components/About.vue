@@ -36,7 +36,7 @@
         </div>
         <div class="item">
           <div class="image">
-            <img src="../assets/webdev.png" alt="" />
+            <img src="https://i.postimg.cc/CLkyw8SJ/Ashton-4-removebg-preview.png" alt="" />
           </div>
           <div>
             <h4>Ashton Abrahams</h4>
@@ -54,10 +54,10 @@
                 alt="github"
                 ><i class="bi bi-github"></i
               ></a>
-              <a href="" target="_blank" alt="linkedin"
+              <a href="https://www.linkedin.com/in/ashton-abrahams-0bb921237/" target="_blank" alt="linkedin"
                 ><i class="bi bi-linkedin"></i
               ></a>
-              <a href="" target="_blank" alt="portfolio"
+              <a href="https://portfolio-8d7d2.web.app/#/" target="_blank" alt="portfolio"
                 ><i class="bi bi-person-circle"></i
               ></a>
             </div>

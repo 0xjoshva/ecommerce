@@ -186,7 +186,7 @@ h1 {
 }
 #products {
   width: 70vw;
-  height: 13rem;
+  height: 15rem;
   margin: 0 auto;
   border-radius: 26px;
   display: flex;
@@ -209,9 +209,10 @@ h6 {
   font-size: 0.87rem;
   font-weight: 400;
   font-family: "Poppins";
-  width: 70%;
+  width: 100%;
   margin-bottom: 1rem;
   text-align: left;
+  padding-right: 2rem;
 }
 .product {
   display: flex;
