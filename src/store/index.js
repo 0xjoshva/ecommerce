@@ -32,12 +32,14 @@ export default createStore({
       });
     },
     signUp: async (context, payload) => {
-      fetch("https://eomp.herokuapp.com/users/register", {
+      fetch("http://eomp.herokuapp.com/users/register", {
         method: 'POST',
         body: JSON.stringify({
             full_name: payload.full_name,
             email: payload.email,
             password: payload.password,
+            phone_number: payload.phone_number,
+            user_type: "user",
         }),
       headers: {
         "Content-type": "application/json",

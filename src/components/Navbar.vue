@@ -49,7 +49,9 @@
           <div>
           <input type="password" v-model="password" placeholder="password" required>
           </div>
-          <div id="person" v-if="user"> Welcome {{ user.full_name }}</div>
+          <div>
+            <input type="phone_number" v-model="phone_number" class="phone_number" placeholder="+2712345679">
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -70,6 +72,7 @@ export default {
       full_name: "",
       email: "",
       password: "",
+      phone_number: "",
     };
   },
   methods: {
@@ -84,6 +87,7 @@ export default {
         full_name: this.full_name,
         email: this.email,
         password: this.password,
+        phone_number: this.phone_number,
       });
     },
   },
