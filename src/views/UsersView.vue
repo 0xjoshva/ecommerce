@@ -5,30 +5,9 @@
         <h1>Users</h1>
         <button type="submit" id="addbtn" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-plus"></i> New Customers</button>
 
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="">
-           <input type="name" v-model="full_name" class="name" placeholder="John Doe" required>
-          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
-          <div>
-          <input type="password" v-model="password" placeholder="password" required>
-          </div>
-          <div id="person" v-if="user"> Welcome {{ user.full_name }}</div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" @click.prevent="signUp()" class="btn btn-primary">Sign up</button>
-      </div>
-    </div>
-  </div>
-</div>
     </div><table id="customers">
   <tr>
+    <th>ID</th>
     <th>Username</th>
     <th>Email</th>
     <th>Contact</th>
@@ -37,6 +16,7 @@
     <th>Action</th>
   </tr>
   <tr v-for="user in users" v-bind:key="user.id">
+     <td>{{user.id}}</td>
     <td>{{user.full_name}}</td>
     <td>{{user.email}}</td>
     <td>{{user.phone_number}}</td>
@@ -44,10 +24,10 @@
     <td>{{user.join_date}}</td>
     <td>
         <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
     <i class="bi bi-three-dots"></i>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Edit</a></li>
     <li><a class="dropdown-item" href="#">Delete</a></li>
   </ul>

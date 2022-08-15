@@ -19,7 +19,7 @@
     <div class="container">
       <!-- item -->
       <div v-for="product in products" v-bind:key="product.id" class="item">
-        <router-link :to="{ name: 'ProductView', params: { id: product.id }}">
+        <router-link :to="{ name: 'ProductView', params: { id: product.id }}" id="router">
         <img v-bind:src="product.image" alt="" class="image" />
         <div class="type">
             <div>
@@ -313,5 +313,8 @@ a:hover {
 }
 .cartbtn:focus {
   transform: scale(0.9);
+}
+#router:hover{
+text-decoration: none;
 }
 </style>

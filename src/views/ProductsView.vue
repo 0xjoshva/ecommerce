@@ -4,6 +4,29 @@
     <div class="heading"> 
         <h1>Products</h1>
         <button type="submit" id="addbtn"><i class="bi bi-plus"></i> New Product</button>
+
+        <!-- Modal login-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" v-model="password" placeholder="password" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Sign in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div><table id="customers">
   <tr>
     <th>ID</th>
@@ -31,7 +54,11 @@
 </div></td>
   </tr>
 
+  
+
 </table>
+
+
  </div>
  </section>
 </template>

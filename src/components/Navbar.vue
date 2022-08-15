@@ -14,7 +14,7 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
       
-<!-- Modal -->
+<!-- Modal login-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -25,8 +25,7 @@
         <form>
           <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
           <div>
-          <input type="password" v-model="password" placeholder="password">
-          <a href="" id="forgotpassword">forgot password?</a>
+          <input type="password" v-model="password" placeholder="password" required>
           </div>
         </form>
       </div>
@@ -36,6 +35,7 @@
     </div>
   </div>
 </div>
+<!-- modal register -->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -50,17 +50,30 @@
           <input type="password" v-model="password" placeholder="password" required>
           </div>
           <div>
-            <input type="phone_number" v-model="phone_number" class="phone_number" placeholder="+2712345679">
+            <input type="phone_number" v-model="phone_number" class="phone_number" placeholder="+27 62 232 2354" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" @click.prevent="signUp()" class="btn btn-primary">Sign up</button>
+        <button type="submit" @click.prevent="signUp()" class="btn btn-primary" data-bs-dismiss="modal" id="liveToastBtn">Sign up</button>
       </div>
     </div>
   </div>
 </div>
-
+<!-- push notification -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+     
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
 
 </div>
   </nav>

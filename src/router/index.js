@@ -18,6 +18,11 @@ const routes = [
     component: () => import("../views/MarketView.vue"),
   },
   {
+    path: "/account",
+    name: "accountdetails",
+    component: () => import("../views/AccountView.vue"),
+  },
+  {
     path: "/admin/users",
     name: "users",
     component: () => import("../views/UsersView.vue"),
