@@ -10,10 +10,10 @@
     <div id="nav-links">
       <router-link to="/">Home</router-link>
       <router-link to="/marketplace">Marketplace</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/contact" id="contact">Contact</router-link>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
-      
+      <router-link to="/account" id="account"> <img src="../assets/webdev2.png" alt="" id="profilepic"> Joshua Steed</router-link>
 <!-- Modal login-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -274,20 +274,45 @@ input{
 input:focus{
   border:1px solid var(--dpurple);
 }
+#contact{
+  border-right: 2px solid rgba(255, 255, 255, 0.062);
+  padding-right: 1.7rem;
+}
 #signup{
   white-space: nowrap;
   background: transparent;
     text-decoration: none;
   color: inherit;
   padding: 0.3rem;
-padding-left: 1.7rem;
+
 padding-right: 0.8rem;
 color:white;
-border-left: 2px solid rgba(255, 255, 255, 0.062);
 border-radius: 0;
 font-weight: 500;
 }
 #signup:hover{
   text-decoration: underline;
 }
+#profilepic{
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  border-radius: 50%;
+}
+#account{
+  white-space: nowrap;
+  background: rgba(71, 71, 71, 0.215);
+  border-radius: 5px;
+  padding: 0.3rem;
+padding-left: 0.8rem;
+padding-right: 0.8rem;
+  width: fit-content;
+  transition: .2s all ease-in-out;
+  display: none;
+}
+#account:hover{
+  background: rgba(71, 71, 71, 0.329);}
+  #account:focus{
+    transform: scale(1.05);
+  }
 </style>
