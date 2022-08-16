@@ -139,7 +139,7 @@ background-repeat: no-repeat;
 </div>
 <div class="text">
   <div class="heading">
-    <h2>KEEP THE EDGE</h2>
+    <h2>STAY ON TOP</h2>
   </div>
   <p>Stay at the top of your game by purchasing our computers. We are stockists of all major brands such as <span>NVIDIA</span>, <span>AMD</span>, <span>INTEL</span>, <SPAN>MSI</SPAN>, and <span>NZXT</span> just to name a few. We have a massive product range which varies at any given time.</p>
 </div>
@@ -164,7 +164,11 @@ export default {
  justify-content: center;
 }
 .content{
-  background-image: linear-gradient(  90.3deg,  rgb(53, 52, 52) 10.9%, var(--bg-color) 87.1% );
+  /* Created with https://www.css-gradient.com */
+background: #250238;
+background: -webkit-radial-gradient(center, #250238, #101010);
+background: -moz-radial-gradient(center, #250238, #101010);
+background: radial-gradient(ellipse at center, #250238, #101010);
    display: flex;
   flex-direction: row;
   align-items: center;
@@ -172,10 +176,10 @@ export default {
   column-gap: 4em;
   width: fit-content;
   border-radius: 26px;
-  width: 70.6em;
+  width: 70rem;
 }
 h2{
-font-family: 'Clash Display';
+font-family: 'ClashDisplay-Light';
 font-weight: 500;
 font-size: 4rem;
 }

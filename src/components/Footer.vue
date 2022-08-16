@@ -36,8 +36,8 @@ export default {
 </script>
 <style scoped>
   #footer{
-    border-top: 2px solid #3E3E3E;
-    background: #171717;
+    border-top: 2px solid #3e3e3e44;
+    background: var(--bg-color);
   width: 100%;
 font-family: 'Poppins', sans-serif;
     color: white;

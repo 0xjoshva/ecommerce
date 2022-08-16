@@ -196,7 +196,7 @@ h1 {
   /* Created with https://www.css-gradient.com */
   background: #1c012c;
 
-  background: linear-gradient(to bottom, #250238, #101010be);
+  background: linear-gradient(to bottom, #250238, #1010104d);
 }
 h6 {
   font-size: large;

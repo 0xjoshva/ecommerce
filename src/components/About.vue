@@ -65,9 +65,9 @@
         </div>
       </div>
       <div  id="text1">
-        <h1>ABOUT</h1>
+        <h1>XYZ<span>tech</span></h1>
         <p>
-          At VTEXtech we sell a wide range of high performance computer
+          At XYZtech we sell a wide range of high performance computer
           components, hardware and gaming systems. From the latest graphics card
           through to a custom built watercooled gaming systems, rest assured we
           have it all. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -204,6 +204,11 @@ h4 {
 #text1 h1{
     font-family: 'ClashDisplay-Medium';
     font-size: 4rem;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+}
+#text1 h1 span{
+    letter-spacing: -1px;
+    font-size: 4rem;
+    font-family: 'ClashDisplay-Light';
 }
 </style>
