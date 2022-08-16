@@ -9,10 +9,9 @@
     <div id="nav-links">
       <router-link class="nav-link" to="/">Home</router-link>
       <router-link class="nav-link" to="/marketplace">Marketplace</router-link>
-      <router-link class="nav-link" to="/contact" id="contact"
-        >Contact</router-link
-      >
-      <router-link to="/cart">Cart</router-link> </div>
+      <router-link to="/cart">Cart</router-link>
+      <router-link class="nav-link" to="/contact" id="contact">Contact</router-link>
+       
       <button
         type="button"
         class="btn btn-primary"
@@ -35,11 +34,11 @@
         <img src="../assets/webdev2.png" alt="" id="profilepic" /> Joshua
         Steed</router-link
       >
+      </div>
       
       
-      <router-link to="/contact">Contact</router-link>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
+      
+      
       
 <!-- Modal login-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -428,5 +427,8 @@ input:focus {
 }
 #account:focus {
   transform: scale(1.05);
+}
+.btn-primary{
+  width:fit-content;
 }
 </style>

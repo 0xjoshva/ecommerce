@@ -19,10 +19,9 @@
 
           <div class="buttons">
             <button>Add to Cart</button>
-=======
+
             
             <button @click="addToCart(product)">Add to Cart</button>
->>>>>>> origin/ash
             <p class="title price">R{{ product.price }}</p>
           </div>
           <div class="specs">
