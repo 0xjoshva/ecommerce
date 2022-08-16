@@ -261,7 +261,7 @@ h6 {
 }
 .rtxdiv {
   display: flex;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 /* not made by me */
