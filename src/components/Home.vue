@@ -165,7 +165,7 @@ export default {};
   background-attachment: fixed;
 }
 .text {
-  padding-top: 4rem;
+      padding-top: 1rem;
   margin: 0 auto;
   width: fit-content;
   text-align: center;
@@ -185,7 +185,7 @@ h1 {
   padding-bottom: 1rem;
 }
 #products {
-  width: 70vw;
+  width: 80vw;
   height: 15rem;
   margin: 0 auto;
   border-radius: 26px;
@@ -255,13 +255,13 @@ h6 {
   font-family: 'Poppins';
 }
 #rtx {
-  width: 80rem;
+  width: 70vw;
   margin: 0 auto;
   padding-top: 1rem;
 }
 .rtxdiv {
   display: flex;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 }
 
 /* not made by me */

@@ -119,9 +119,10 @@ nav a {
 padding-left: 0.8rem;
 padding-right: 0.8rem;
 }
-nav a:focus{
+nav a.active{
   color: white;
 }
+
 nav {
   background: transparent;
   color: rgba(255, 255, 255, 0.404);
