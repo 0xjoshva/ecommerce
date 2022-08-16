@@ -10,6 +10,7 @@
     <div id="nav-links">
       <router-link to="/">Home</router-link>
       <router-link to="/marketplace">Marketplace</router-link>
+      <router-link to="/cart">Cart</router-link>
       <router-link to="/contact">Contact</router-link>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
@@ -43,7 +44,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form>
            <input type="name" v-model="full_name" class="name" placeholder="John Doe" required>
           <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
           <div>

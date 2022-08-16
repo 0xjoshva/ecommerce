@@ -16,6 +16,27 @@
         <input name="search" type="search" id="search" placeholder="search"
       /></label>
     </div>
+        <form>
+          <input type="text" v-model="title" class="email" placeholder="title" required>
+          <div>
+          <input type="number" v-model="price" placeholder="price" required>
+          </div>
+          <div>
+          <input type="text" v-model="description" placeholder="description" required>
+          </div>
+          <div>
+          <input type="text" v-model="image" placeholder="image" required>
+          </div>
+          <div>
+          <input type="text" v-model="category" placeholder="category" required>
+          </div>
+          <div>
+          <input type="text" v-model="created_by" placeholder="created_by" required>
+          </div>
+<button id="addProduct" type="submit" @click.prevent="addProduct()" class="btn btn-primary">Add Product</button>
+        </form>
+        
+
     <div class="container">
       <!-- item -->
       <div v-for="product in products" v-bind:key="product.id" class="item">
@@ -34,9 +55,16 @@
 </template>
 <script type="text/javascript">
 export default {
+    props: ["product"],
     data() {
     return {
       products: null,
+      title: "",
+      price: "",
+      description: "",
+      image: "",
+      category: "",
+      created_by: "",
     };
   },
   mounted() {
@@ -44,6 +72,23 @@ export default {
     })
       .then((res) => res.json())
       .then((data) => (this.products = data), console.log(this.products));
+  },
+  computed: {
+    product() {
+      return this.$store.state.product;
+    },
+  },
+  methods: {
+    addProduct() {
+      this.$store.dispatch("addProduct", {
+        title: this.title,
+        price: this.price,
+        description: this.description,
+        image: this.image,
+        category: this.category,
+        created_by:  this.created_by,
+      });
+    },
   },
 };
 </script>
