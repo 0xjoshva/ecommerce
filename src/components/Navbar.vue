@@ -26,12 +26,11 @@
           <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
           <div>
           <input type="password" v-model="password" placeholder="password">
-          <a href="" id="forgotpassword">forgot password?</a>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Sign in</button>
+        <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Sign In</button>
       </div>
     </div>
   </div>
@@ -194,7 +193,7 @@ body {
   z-index: 0 !important;
 }
 .modal-content {
-  background: #1f1f1f;
+  background: #101010;
   color: white;
   border: none;
   border-radius: 25px;
@@ -213,10 +212,9 @@ body {
   display: flex;
   align-self: center;
   justify-self: center;
-  width: 80%;
   justify-content: space-evenly;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  width: fit-content;
+  padding: .6rem 4rem;
 }
 .btn-primary:focus {
   box-shadow: none;

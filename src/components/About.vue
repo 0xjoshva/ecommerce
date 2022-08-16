@@ -36,7 +36,7 @@
         </div>
         <div class="item">
           <div class="image">
-            <img src="https://i.postimg.cc/CLkyw8SJ/Ashton-4-removebg-preview.png" alt="" />
+            <img src="../assets/ashton.png" alt="" />
           </div>
           <div>
             <h4>Ashton Abrahams</h4>
@@ -94,7 +94,6 @@ export default {};
     rgb(28, 1, 44) 0%,
     rgba(16, 16, 16, 1) 63%
   );
-  background-attachment: fixed;
   padding-top: 10rem;
   padding-block: 10rem;
 }

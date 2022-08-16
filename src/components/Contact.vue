@@ -17,7 +17,8 @@ export default {
   #contact{
     width: 100%;
     height: 100vh;
-    background: url(../assets/SimpleShiny.svg);
+    background: 
+    #101010;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -33,7 +34,7 @@ export default {
     width: 50rem;
     display: flex;
     flex-direction: column;
-box-shadow: 0 0 0 4px #333;
+box-shadow: 0 0 0 4px rgba(26, 25, 25, 0.671);
     border-radius: 5px;
     row-gap: 1rem;
   }
@@ -41,7 +42,7 @@ box-shadow: 0 0 0 4px #333;
 textarea{
    resize: none;
    border-radius: 5px;
-   background: #303030;
+   background: #3030309f;
    border: none;
    padding: 1rem;
    color: white;
@@ -49,7 +50,7 @@ textarea{
 }
 
 input{
-  background: #303030;
+  background: #3030309f;
   outline: none;
   border: none;
   height: 3rem;

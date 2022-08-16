@@ -54,12 +54,10 @@ export default {};
   height: fit-content;
   background: radial-gradient(
     ellipse at 0% 55%,
-    rgb(28, 1, 44) 0%,
-    rgba(16, 16, 16, 1) 63%
+    rgb(43, 18, 63) 0%,
+    rgba(16, 16, 16, 1) 43%
   );
-  /* background-attachment: fixed; */
   padding-bottom: 5rem;
-  background-attachment: fixed;
 }
 .text {
       padding-top: 1rem;
@@ -82,19 +80,18 @@ h1 {
   padding-bottom: 1rem;
 }
 #products {
-  width: 80vw;
-  height: 15rem;
-  margin: 0 auto;
-  border-radius: 26px;
-  display: flex;
-  flex-direction: row;
-  font-family: "Poppins";
-  color: rgb(211, 211, 211);
-  /* Created with https://www.css-gradient.com */
-  background: #1c012c;
-
-  background: linear-gradient(to bottom, #250238, #101010be);
+    width: 89vw;
+    height: 11rem;
+    margin: 0 auto;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: row;
+    font-family: "Poppins";
+    color: rgb(211, 211, 211);
+    background: #1c012c;
+    background: linear-gradient(to bottom, rgb(59, 26, 85),rgb(33, 14, 48), #101010);
 }
+
 h6 {
   font-size: large;
   font-family: "Inter";

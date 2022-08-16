@@ -1,35 +1,48 @@
 <template>
-  <body>
-    <div class="wrapper">
-      <h1>Cart</h1>
-      <div class="project">
-        <div class="shop">
-          <div class="box">
-            <div class="content">
+<section class="cart">
+<div class="pleft">
               <div v-for="product in cartProducts" :key="product.id">
-                <img :src="product.image">
-                <h3>{{ product.title }}</h3>
-                <p class="color-secondary">{{ product.category }}</p>
-                <button @click="deleteFromCart(product.id)" class="btn-area">
+                <img :src="product.image" class="pimage">
+                <h3 class="ptitle">{{ product.title }}</h3>
+                <p class="pcategory">{{ product.category }}</p>
+                <button @click="deleteFromCart(product.id)" class="btnremove">
                   <i class="fa fa-trash"></i>
                   <span class="btn2">Remove</span>
                 </button>
-                <div class="right-bar">
-                  <p class="d-flex justify-content- gap-3">
+                <div class="price">
+                  <p class="subtotal">
                     <span>Subtotal: R{{ product.price }}</span>
                   </p>
                   <hr />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <router-link to="/checkout">Checkout</router-link>
-    </div>
-  </body>
+</div>
+
+<div class="pright">
+<div class="cardwrapper">
+<h2>Card Details</h2>
+<img src="../assets/bankcard.png" alt="" id="card">
+</div>
+<div class="total">
+<h2>Order Summary</h2>
+<table>
+  <tr>
+    <td>Subtotal:</td>
+    <td>Number</td>
+  </tr>
+    <tr>
+    <td>Shipping:</td>
+    <td>R 0</td>
+  </tr>
+    <tr>
+    <td><strong>Total:</strong></td>
+    <td>Number</td>
+  </tr>
+</table>
+<button class="btncheckout">Checkout</button>
+</div>
+</div>
+</section>
 </template>
 <script>
 export default {
@@ -55,143 +68,106 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: montserrat;
-  background: var(--bg-color);
-}
-.wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.wrapper h1 {
-  padding: 30px 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-h1{
-font-family: 'ClashDisplay-Extralight';
-font-weight: 500;
-font-size: 4rem;
-}
-.project {
-  display: flex;
-}
-.shop {
-  flex: 75%;
-}
-.box {
-  display: flex;
+.cart{
+  height: 86vh;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: var(--bg-color);
-  box-shadow: 0px 0px 0px 4px #4b0085;
-}
-.box img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-}
-.content {
-  padding: 20px;
-  position: relative;
-  width: 100%;
-}
-.btn-area {
-  position: absolute;
-  /* bottom: 20px; */
-  right: 20px;
-  border: 2px solid rgb(81, 2, 134);
-  padding: 10px 15px;
-  background-color: var(--bg-color);
-  color: white;
-  border-radius: 10px;
-}
-.unit input {
-  width: 50px;
-  padding: 8px;
-  text-align: center;
-}
-.btn-area i {
-  margin-right: 5px;
-}
-.right-bar {
-  flex: 25%;
-  margin-left: 20px;
-  padding: 20px;
-  height: 100px;
-  background: var(--bg-color);
-  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
-}
-.right-bar hr {
-  margin-bottom: 25px;
-}
-.right-bar p {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  font-size: 20px;
-}
-.right-bar a {
-  background-color: #42b983;
-  color: var(--bg-color);
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  height: 40px;
-  font-weight: 900;
-}
-.right-bar i {
-  margin-right: 15px;
-}
-.right-bar a:hover {
-  background-color: #42b983;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10rem;
 }
 
-span {
-  font-size: 25px;
+.pleft{
+width: 35rem;
+height: 90%;
+padding: 1rem;
+background: linear-gradient(to right, rgb(51, 22, 73),rgb(33, 14, 48), #101010);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+.pright{
+height: 80%;
+width: fit-content;
+display: flex;
+flex-direction: column;
+margin-right: 5rem;
+background: linear-gradient(to left, rgb(51, 22, 73),rgb(33, 14, 48), #101010);
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+.total{
+width: 100%;
+height: 20rem;
+padding: 1rem;
+color:rgba(255, 255, 255, 0.658);
+}
+.total h2{
+  color: rgb(230, 230, 230);
+  font-family: 'Montserrat';
+  padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: fit-content;
+  
+}
+.cardwrapper{
+width: 100%;
+height: 20rem;
+background: none;
+padding: 1rem;
+display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.137);
 }
 
-a {
-  font-size: 20px;
+.cardwrapper h2{
+  color: rgb(230, 230, 230);
+  font-family: 'Montserrat';
+  padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: fit-content;
+  
 }
+#card{
+height: 15rem;
+width: 25rem;
 
-@media screen and (max-width: 700px) {
-  .content h3 {
-    margin-bottom: 15px;
-  }
-  .content h4 {
-    margin-bottom: 20px;
-  }
-  .btn2 {
-    display: none;
-  }
-  .box {
-    height: 150px;
-  }
-  .box img {
-    height: 150px;
-    width: 200px;
-  }
 }
-@media screen and (max-width: 900px) {
-  .project {
-    flex-direction: column;
-  }
-  .right-bar {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
+tr{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
 }
-@media screen and (max-width: 125px) {
-  .wrapper {
-    max-width: 95%;
-  }
+td{
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+    padding: 0.75rem;
+    outline: none;
+        display: table-cell;
+    vertical-align: inherit;
 }
-</style>
+td:nth-child(odd){
+  padding-right: 5rem;
+}
+.pimage{
+
+}
+.ptitle{
+
+}
+.pcategory{
+
+}
+.btnremove{
+
+}
+.price{
+
+}
+.subtotal{
+
+}
+.btncheckout{
+  
+}
+</style> 

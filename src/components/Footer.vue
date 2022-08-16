@@ -26,7 +26,9 @@
     </div>
   </div>
 </div>
+<div id="rightsdiv">
 <p id="rights">Copyright. All Rights Reserved - 2022</p>
+</div>
 </section>
 </template>
 <script>
@@ -36,22 +38,22 @@ export default {
 </script>
 <style scoped>
   #footer{
-    border-top: 2px solid #3E3E3E;
-    background: #171717;
+    background: #101010;
   width: 100%;
 font-family: 'Poppins', sans-serif;
     color: white;
+    
+    padding-top: 4rem;
   }
   .container{
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: row;
-      width: 100%;
-    justify-content: space-between; 
-  
+    margin: 0 auto;
+    width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
   }
   #rights{
-    color: #535353;
+    color: #868585;
   font-weight: 500;
   text-align: center;
   padding-top: 3rem;
@@ -79,5 +81,6 @@ font-family: 'Poppins', sans-serif;
     }
     #logo{
       height: 2.5rem;
+      width: 8rem;
     }
 </style>

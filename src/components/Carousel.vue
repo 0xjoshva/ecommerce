@@ -164,15 +164,18 @@ export default {
  justify-content: center;
 }
 .content{
-  background-image: linear-gradient(  90.3deg,  rgb(53, 52, 52) 10.9%, var(--bg-color) 87.1% );
-   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 4em;
-  width: fit-content;
-  border-radius: 26px;
-  width: 70.6em;
+    background-image: linear-gradient( 180deg, rgb(28, 1, 44) 10.9%, var(--bg-color) 87.1% );
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 4em;
+    column-gap: 4em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 26px;
+    width: 90vw;
 }
 h2{
  font-family: 'ClashDisplay-Extralight';
