@@ -3,23 +3,18 @@
       <div v-for="product in product" v-bind:key="product.id" class="item">
         <img class="image" :src="product.image" alt="" />
         <div class="text">
-          <h2 class="category">
-            <router-link to="/marketplace" id="backbtn"
-              ><a href="/"
-                ><p><i class="bi bi-arrow-left"></i></p></a></router-link
-            >{{ product.category.toUpperCase() }}
-          </h2>
+          
+          <h2 class="category"><router-link to="/marketplace" id="backbtn"
+            ><a href="/"
+              ><p><i class="bi bi-arrow-left"></i></p></a
+            ></router-link
+          >{{ product.category.toUpperCase() }}</h2>
           <h2 class="title">{{ product.title }}</h2>
           <p class="descrip">
-            {{ product.description }} lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eaque laboriosam earum doloribus consequuntur
-            suscipit, porro aperiam cumque necessitatibus corporis eos magni
-            recusandae quae, dolorum fugiat?
+            {{ product.description }} lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laboriosam earum doloribus consequuntur suscipit, porro aperiam cumque necessitatibus corporis eos magni recusandae quae, dolorum fugiat?
           </p>
-
+      
           <div class="buttons">
-            <button>Add to Cart</button>
-
             
             <button @click="addToCart(product)">Add to Cart</button>
             <p class="title price">R{{ product.price }}</p>
@@ -83,8 +78,9 @@ export default {
   height: fit-content;
   width: 90rem;
   display: flex;
-  border-radius: 20px;
+   border-radius: 20px;
   box-shadow: 0px 0px 0px 4px #4b0085;
+  
 }
 .image {
   width: 40rem;
@@ -101,12 +97,12 @@ export default {
 .image:hover {
   transform: scale(1.04);
 }
-#container {
-  display: flex;
-  justify-content: center;
-  height: 84vh;
-  width: 100%;
-  align-items: center;
+#container{
+    display: flex;
+    justify-content: center;
+    height: 84vh;
+    width: 100%;
+    align-items: center;
 }
 .category {
   font-family: "Poppins";
@@ -114,14 +110,14 @@ export default {
   font-size: 3rem;
   line-height: 3rem;
   margin-top: 1rem;
-  color: var(--white);
+  color:var(--white);
 }
 .title {
   font-family: "Poppins";
   font-weight: 200;
   font-size: 3rem;
   line-height: 3rem;
-  color: var(--white);
+  color:var(--white);
 }
 .specs > div {
   color: #8a8a8a;
@@ -195,10 +191,11 @@ button:hover {
 button:focus {
   transform: scale(1);
 }
-#backbtn {
+#backbtn{
   font-size: 2rem;
 }
-.price {
-  padding-top: 2rem;
+.price{
+  padding-top:2rem;
 }
+
 </style>

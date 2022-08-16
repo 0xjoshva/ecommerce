@@ -7,148 +7,62 @@
     </div>
 
     <div id="nav-links">
-      <router-link class="nav-link" to="/">Home</router-link>
-      <router-link class="nav-link" to="/marketplace">Marketplace</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/marketplace">Marketplace</router-link>
       <router-link to="/cart">Cart</router-link>
-      <router-link class="nav-link" to="/contact" id="contact"
-        >Contact</router-link
-      >
-
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal2"
-        id="signup"
-      >
-        Sign Up
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        id="login1"
-      >
-        Login
-      </button>
-      <router-link to="/account" id="account">
-        <img src="../assets/webdev2.png" alt="" id="profilepic" /> Joshua
-        Steed</router-link
-      >
-    </div>
-
-    <!-- Modal login-->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <router-link to="/contact">Contact</router-link>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
+      
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" v-model="password" placeholder="password">
+          <a href="" id="forgotpassword">forgot password?</a>
           </div>
-          <div class="modal-body">
-            <form>
-              <input
-                type="email"
-                v-model="email"
-                class="email"
-                placeholder="example@email.com"
-                required
-              />
-              <div>
-                <input
-                  type="password"
-                  v-model="password"
-                  placeholder="password"
-                />
-              </div>
-                
-            </form>
-          </div>
-          <div class="modal-footer">
+        </form>
+      </div>
+      <div class="modal-footer">
         <button id="login" type="submit" @click.prevent="login()" class="btn btn-primary">Sign in</button>
       </div>
-        </div>
-        </div>
-        </div>
-        <!-- modal register -->
-        <div
-          class="modal fade"
-          id="exampleModal2"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel2"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button
-                  type="button"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form action="">
-                  <input
-                    type="name"
-                    v-model="full_name"
-                    class="name"
-                    placeholder="John Doe"
-                    required
-                  />
-                  <input
-                    type="email"
-                    v-model="email"
-                    class="email"
-                    placeholder="example@email.com"
-                    required
-                  />
-                  <div>
-                    <input
-                      type="password"
-                      v-model="password"
-                      placeholder="password"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="phone_number"
-                      v-model="phone_number"
-                      class="phone_number"
-                      placeholder="+27 62 232 2354"
-                      required
-                    />
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="submit"
-                  @click.prevent="signUp()"
-                  class="btn btn-primary"
-                  data-bs-dismiss="modal"
-                  id="liveToastBtn"
-                >
-                  Sign up
-                </button>
-              </div>
-            </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+           <input type="name" v-model="full_name" class="name" placeholder="John Doe" required>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" v-model="password" placeholder="password" required>
           </div>
-        </div>
+          <div>
+            <input type="phone_number" v-model="phone_number" class="phone_number" placeholder="+2712345679">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" @click.prevent="signUp()" class="btn btn-primary">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+</div>
   </nav>
 </template>
 <script>
@@ -160,15 +74,6 @@ export default {
       password: "",
       phone_number: "",
     };
-  },
-  mounted() {
-    function activeLinks() {
-      let navLinks = document.querySelector(".nav-link");
-      navLinks.addEventListener("click", changeClass);
-      function changeClass() {
-        navLinks.classList.add("active");
-      }
-    }
   },
   methods: {
     login() {

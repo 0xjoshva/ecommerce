@@ -104,6 +104,7 @@ export default createStore({
             email: payload.email,
             password: payload.password,
             phone_number: payload.phone_number,
+            join_date: "2023-06-03",
             user_type: "user",
         }),
       headers: {
