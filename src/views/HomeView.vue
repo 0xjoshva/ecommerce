@@ -1,6 +1,7 @@
 <template>
   <Home />
   <About/>
+  <Footer/>
 </template>
 
 <script>

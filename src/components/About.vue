@@ -96,6 +96,7 @@ export default {};
   );
   background-attachment: fixed;
   padding-top: 10rem;
+  padding-block: 10rem;
 }
 
 .container {
