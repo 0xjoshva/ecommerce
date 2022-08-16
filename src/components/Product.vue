@@ -1,6 +1,5 @@
 <template>
   <section id="wrapper">
-    <div v-if="product" id="container">
       <div v-for="product in product" v-bind:key="product.id" class="item">
         <img class="image" :src="product.image" alt="" />
         <div class="text">
@@ -20,6 +19,10 @@
 
           <div class="buttons">
             <button>Add to Cart</button>
+=======
+            
+            <button @click="addToCart(product)">Add to Cart</button>
+>>>>>>> origin/ash
             <p class="title price">R{{ product.price }}</p>
           </div>
           <div class="specs">
@@ -39,15 +42,25 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
 </template>
 <script>
 export default {
+  props: ["id"],
+  computed: {
+    item() {
+      return this.$store.state.item;
+    },
+  },
   data() {
     return {
       product: null,
     };
+  },
+   methods: {
+    addToCart(item) {
+      this.$store.commit("updateCart", item);
+    },
   },
   mounted() {
     fetch("https://eomp.herokuapp.com/products/" + this.$route.params.id)

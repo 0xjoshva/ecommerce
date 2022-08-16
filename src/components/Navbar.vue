@@ -12,6 +12,7 @@
       <router-link class="nav-link" to="/contact" id="contact"
         >Contact</router-link
       >
+      <router-link to="/cart">Cart</router-link> </div>
       <button
         type="button"
         class="btn btn-primary"
@@ -34,54 +35,27 @@
         <img src="../assets/webdev2.png" alt="" id="profilepic" /> Joshua
         Steed</router-link
       >
-      <!-- Modal login-->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <input
-                  type="email"
-                  v-model="email"
-                  class="email"
-                  placeholder="example@email.com"
-                  required
-                />
-                <div>
-                  <input
-                    type="password"
-                    v-model="password"
-                    placeholder="password"
-                    required
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                id="login"
-                type="submit"
-                @click.prevent="login()"
-                class="btn btn-primary"
-              >
-                Sign in
-              </button>
-            </div>
+      
+      
+      <router-link to="/contact">Contact</router-link>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
+      
+<!-- Modal login-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" v-model="password" placeholder="password">
+          <a href="" id="forgotpassword">forgot password?</a>
           </div>
+          </form>
         </div>
       </div>
       <!-- modal register -->
@@ -174,6 +148,33 @@
         </div>
       </div>
     </div>
+  </div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+           <input type="name" v-model="full_name" class="name" placeholder="John Doe" required>
+          <input type="email" v-model="email" class="email" placeholder="example@email.com" required>
+          <div>
+          <input type="password" v-model="password" placeholder="password" required>
+          </div>
+          <div>
+            <input type="phone_number" v-model="phone_number" class="phone_number" placeholder="+2712345679">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" @click.prevent="signUp()" class="btn btn-primary">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </nav>
 </template>
 <script>
