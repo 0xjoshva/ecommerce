@@ -16,6 +16,17 @@
         <input name="search" type="search" id="search" placeholder="search"
       /></label>
     </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" id="createbtn">Create Product</button>
+      
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <form>
           <input type="text" v-model="title" class="email" placeholder="title" required>
           <div>
@@ -33,8 +44,15 @@
           <div>
           <input type="text" v-model="created_by" placeholder="created_by" required>
           </div>
-<button id="addProduct" type="submit" @click.prevent="addProduct()" class="btn btn-primary">Add Product</button>
         </form>
+      </div>
+      <div class="modal-footer">
+        <button id="addProduct" type="submit" @click.prevent="addProduct()" class="btn btn-primary">Add Product</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
         
 
     <div class="container">
@@ -361,5 +379,70 @@ a:hover {
 }
 #router:hover{
 text-decoration: none;
+}
+
+.modal-backdrop {
+  position: relative !important;
+  z-index: 0 !important;
+}
+.modal-content {
+  background: #101010;
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+.modal-header {
+  border-bottom: none;
+  padding: 0;
+}
+.modal-footer {
+  border-top: none;
+}
+.btn-primary {
+  background: var(--dpurple);
+  border: none;
+  outline: none;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-evenly;
+  width: fit-content;
+  padding: .6rem 4rem;
+}
+.btn-primary:focus {
+  box-shadow: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.active {
+  color: white;
+}
+input {
+  background: #303030;
+  outline: none;
+  border: none;
+  height: 3rem;
+  border-radius: 5px;
+  color: white;
+  font-family: "Inter";
+  padding-left: 1rem;
+  width: 100%;
+  border: 1px solid #303030;
+}
+.btn-secondary {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--dpurple);
+}
+.modal-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 0.75rem;
 }
 </style>

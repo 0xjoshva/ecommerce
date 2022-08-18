@@ -10,6 +10,16 @@
       <router-link to="/">Home</router-link>
       <router-link to="/marketplace">Marketplace</router-link>
       <router-link to="/cart">Cart</router-link>
+      <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Admin
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><router-link to="/admin/users" class="dropdown-item">Users</router-link></li>
+    <li><router-link to="/admin/products" class="dropdown-item">Products</router-link></li>
+  </ul>
+</div>
       <router-link to="/contact">Contact</router-link>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="signup">Sign Up</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login1">Login</button>
@@ -308,5 +318,22 @@ input:focus {
 }
 .btn-primary {
   width: fit-content;
+}
+
+.dropdown-toggle{
+  border: none !important;
+    text-decoration: none;
+  color: inherit;
+  padding: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+   font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.dropdown-toggle:focus{
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 </style>
