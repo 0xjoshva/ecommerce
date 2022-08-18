@@ -17,7 +17,7 @@
       /></label>
     </div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" id="createbtn">Create Product</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" id="addbtn"><i class="bi bi-plus" ></i> New Product</button>
       
 <!-- Modal -->
 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
@@ -444,5 +444,17 @@ input {
   align-items: flex-end;
   justify-content: space-evenly;
   padding: 0.75rem;
+}
+
+#addbtn{
+    outline:none;
+    border: none;
+    border-radius: 26px;
+    background: purple;
+    color: white;
+    width:fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(to right, #510286, #480176, #3e0067, #350058, #2c0049);
 }
 </style>

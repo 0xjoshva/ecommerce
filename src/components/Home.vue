@@ -24,7 +24,7 @@
             <h6 class="title">NVIDIA RTX 3090</h6>
             <p class="desc">
               Corporis repudiandae dignissimos aperiam reiciendis quidem
-              nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam aliquam assumenda.
             </p>
             <router-link to="/product/2" id="btn123">View more</router-link>
           </div>
@@ -35,7 +35,7 @@
             <h6 class="title">NZXT CPU COOLER</h6>
             <p class="desc">
               Corporis repudiandae dignissimos aperiam reiciendis quidem
-              nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis a dolores hic.
             </p>
             <router-link to="/product/1" id="btn123">View more</router-link>
           </div>
