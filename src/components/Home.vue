@@ -4,9 +4,7 @@
       <div class="text">
         <h1>RTX <span>3080</span></h1>
         <p id="subheading">play with an unfair advantage</p>
-        <router-link to="/marketplace" id="btnmarket"
-          >Browse Marketplace</router-link
-        >
+    
       </div>
       <div class="rtxdiv">
         <img src="../assets/rtx101.png" alt="" id="rtx" />

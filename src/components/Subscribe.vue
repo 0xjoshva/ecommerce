@@ -110,7 +110,7 @@ width: 10rem;
     font-family: "Poppins";
     color: rgb(211, 211, 211);
     background: #1c012c;
-    background: linear-gradient(to top, rgb(51, 22, 73),rgb(33, 14, 48), #101010);
+    background-image: linear-gradient( 0deg, rgb(28, 1, 44) 10.9%, var(--bg-color) 87.1% );
     margin-bottom: 4rem;
  }
  ::placeholder{
